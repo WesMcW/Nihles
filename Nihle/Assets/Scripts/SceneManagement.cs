@@ -25,22 +25,36 @@ public class SceneManagement : MonoBehaviour
 
     /* BELOW ARE METHODS FOR THE TITLE SCREEN */
 
-    public void playGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
     public void exitGame()
     {
         Debug.Log("Quit Game");
         Application.Quit();
     }
 
+    public void previousScene()
+    {
+        //load previos scene or "go back"
+        if(SceneManager.GetActiveScene().buildIndex > 0)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void returnToTitle()
+    {
+        //load to title screen; assuming it is build index 0 for now
+        SceneManager.LoadScene(0);
+    }
+
     public void playLevel()
     {
         //if we are using text mesh pro this needs to be changed
+        //may not need this method 
         Text buttonText = transform.Find("Text").GetComponent<Text>();
 
-        SceneManager.LoadScene(buttonText.text);
+        SceneManager.LoadScene("Level " + buttonText.text);
+    }
+
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

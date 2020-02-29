@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIButtonNav : MonoBehaviour
 {
@@ -92,6 +93,7 @@ public class UIButtonNav : MonoBehaviour
     public void howToButton()
     {
         titleScreen.SetActive(false);
+        playScreen.SetActive(true);
         howToPlayScreen.SetActive(true);
         eventSystem.SetSelectedGameObject(howToPlayScreen.transform.GetChild(0).gameObject);
     }
@@ -146,6 +148,6 @@ public class UIButtonNav : MonoBehaviour
     public void playLevel(int level)
     {
         //load level
-        
+        SceneManager.LoadScene(level);
     }
 }
