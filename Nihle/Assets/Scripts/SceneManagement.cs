@@ -27,13 +27,45 @@ public class SceneManagement : MonoBehaviour
 
     public void playGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //load playScreen
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void freePlay()
+    {
+        //load freePlay
+        //SceneManager.LoadScene();
+    }
+
+    public void challengeMode()
+    {
+        //load challenge mode
+        //SceneManager.LoadScene();
+    }
+
+    public void howToPlay()
+    {
+        //load how to play screen
+        //SceneManager.LoadScene();
     }
 
     public void exitGame()
     {
         Debug.Log("Quit Game");
         Application.Quit();
+    }
+
+    public void previousScene()
+    {
+        //load previos scene or "go back"
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+    }
+
+    public void returnToTitle()
+    {
+        //load to title screen; assuming it is build index 0 for now
+        SceneManager.LoadScene(0);
     }
 
     public void playLevel()
