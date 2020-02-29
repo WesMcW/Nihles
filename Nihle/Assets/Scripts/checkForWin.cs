@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class checkForWin : MonoBehaviour
 {
+    public Sprite star;
+
     public GameObject winScreen;
     public GameObject scoreImg;
 
@@ -28,6 +30,21 @@ public class checkForWin : MonoBehaviour
             else
             {
                 // set score
+                scoreImg.SetActive(true);
+
+                int finalScore = p1.GetComponent<PlayerInteract>().showScore();
+                if(finalScore > 0)
+                {
+                    scoreImg.transform.GetChild(0).GetComponent<Image>().sprite = star;
+                    if(finalScore > 1)
+                    {
+                        scoreImg.transform.GetChild(1).GetComponent<Image>().sprite = star;
+                        if(finalScore > 2)
+                        {
+                            scoreImg.transform.GetChild(2).GetComponent<Image>().sprite = star;
+                        }
+                    }
+                }
             }
         }
     }

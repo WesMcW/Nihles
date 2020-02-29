@@ -7,8 +7,8 @@ public class PlayerInteract : MonoBehaviour
     public int playerNum;
     string interactButton;
 
-    public int sadCollect, hapCollect, totalCollect, score;
-
+    public int sadCollect, hapCollect;
+    public int totalCollect, score;
     public GameObject otherPlayer;
 
     // Start is called before the first frame update
@@ -49,7 +49,7 @@ public class PlayerInteract : MonoBehaviour
     }
 
     //Give the final score
-    public void showScore()
+    public int showScore()
     {
         if(totalCollect == 6)
         {
@@ -63,5 +63,7 @@ public class PlayerInteract : MonoBehaviour
         {
             score = 1;
         }
+
+        return score;
     }
 }
