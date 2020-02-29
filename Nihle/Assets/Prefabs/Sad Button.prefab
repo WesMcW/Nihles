@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8810740699024380592}
   - component: {fileID: 8810740699024380595}
   - component: {fileID: 8810740699024380593}
+  - component: {fileID: 517384820}
   m_Layer: 0
   m_Name: Sad Button
   m_TagString: Ground
@@ -90,7 +91,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8810740699024380594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -109,6 +110,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.840616, y: 0.15024137}
   m_EdgeRadius: 0
+--- !u!68 &517384820
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8810740699024380594}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.62004757, y: -0.08399582}
+  - {x: 0.013498306, y: 0.08108592}
+  - {x: 0.72123957, y: -0.08477163}
 --- !u!1 &8810740699561997163
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +142,7 @@ GameObject:
   - component: {fileID: 8810740699561997161}
   - component: {fileID: 8810740699561997167}
   - component: {fileID: 3859448739187355849}
+  - component: {fileID: 1226231861}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Ground
@@ -219,7 +240,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8810740699561997163}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -260,3 +281,22 @@ MonoBehaviour:
     type: 3}
   isPlatformButton: 1
   isWorldChangeButton: 0
+--- !u!68 &1226231861
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8810740699561997163}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.641469, y: -0.3503834}
+  - {x: 0.0027666092, y: 0.16319214}
+  - {x: 0.6486721, y: -0.35038292}
