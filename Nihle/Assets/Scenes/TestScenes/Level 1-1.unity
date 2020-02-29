@@ -586,6 +586,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 913963192402961392, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.27409244
+      objectReference: {fileID: 0}
+    - target: {fileID: 913963192402961392, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 913963192402961392, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.5481849
+      objectReference: {fileID: 0}
     - target: {fileID: 1846133525381875010, guid: 563d13638d9303d4c9ea72004b47089b,
         type: 3}
       propertyPath: otherDoor
@@ -651,11 +666,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2451634565743360113, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451634565743360113, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451634565743360113, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451634565743360113, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8641865808188947022, guid: af22472c9551949cd9d3480fa5360891,
+        type: 3}
     - target: {fileID: 2451634565743360126, guid: 563d13638d9303d4c9ea72004b47089b,
         type: 3}
       propertyPath: m_Name
       value: Sad Door
       objectReference: {fileID: 0}
+    - target: {fileID: 8323492878379642465, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1858f260a4cfd614b8c6f85893a0f311, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 563d13638d9303d4c9ea72004b47089b, type: 3}
 --- !u!1001 &393004184
@@ -2073,6 +2114,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 913963192402961392, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.30446577
+      objectReference: {fileID: 0}
+    - target: {fileID: 913963192402961392, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 913963192402961392, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.6089315
+      objectReference: {fileID: 0}
     - target: {fileID: 1846133525381875010, guid: 563d13638d9303d4c9ea72004b47089b,
         type: 3}
       propertyPath: otherDoor
@@ -2132,6 +2188,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451634565743360113, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4689337502761445711, guid: 0651e768c8fd84741843e39e4dc1e853,
+        type: 3}
+    - target: {fileID: 2451634565743360113, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451634565743360113, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451634565743360113, guid: 563d13638d9303d4c9ea72004b47089b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2451634565743360126, guid: 563d13638d9303d4c9ea72004b47089b,
         type: 3}
