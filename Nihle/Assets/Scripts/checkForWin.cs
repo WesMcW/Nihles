@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class checkForWin : MonoBehaviour
 {
     public GameObject winScreen;
+    public GameObject scoreImg;
 
     public WinCondition p1Win, p2Win;
     public GameObject p1, p2;
@@ -22,8 +23,12 @@ public class checkForWin : MonoBehaviour
             Debug.Log("Yay you won");
             winScreen.SetActive(true);
             setButtonNavs();
-            // show score
-            // enable button navigation for win screen
+
+            if (GetComponent<LevelStartup>().isFreePlay) scoreImg.SetActive(false);
+            else
+            {
+                // set score
+            }
         }
     }
 
@@ -52,6 +57,16 @@ public class checkForWin : MonoBehaviour
 
     public void nextLevel()
     {
-        //SceneManagement.currInstance.
+        SceneManagement.currInstance.nextLevel();
+    }
+
+    public void restart()
+    {
+        SceneManagement.currInstance.restartLevel();
+    }
+
+    public void toTitle()
+    {
+        SceneManagement.currInstance.returnToTitle();
     }
 }
