@@ -18,9 +18,6 @@ public class PlayerMovement : MonoBehaviour
     public float lowJumpMultiplier = 2f;
     public float fallMultiplier = 2.5f;
 
-    [SerializeField]
-    float defaultScale = 4;
-
     public Vector2 movement;
     public Rigidbody2D rb;
     private Animator anim;
