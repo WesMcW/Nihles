@@ -16,7 +16,7 @@ public class PushBlock : MonoBehaviour
     public void pushedBlock(int playerNum)
     {
         // check for player type if can push
-        if (playerNum == 1 && isHappy)
+        if (playerNum == 2 && isHappy)
         {
             if (transform.position.x != (0 - myCopy.transform.position.x))
             {
@@ -24,7 +24,7 @@ public class PushBlock : MonoBehaviour
                 myCopy.transform.position = new Vector3(0 - transform.position.x, transform.position.y, 0);
             }
         }
-        else if(playerNum == 2 && !isHappy)
+        else if(playerNum == 1 && !isHappy)
         {
             if (transform.position.x != (0 - myCopy.transform.position.x))
             {
