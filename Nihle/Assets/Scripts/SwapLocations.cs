@@ -8,8 +8,6 @@ namespace swapper
     {
         GameObject player1;
         GameObject player2;
-        GameObject Happiness;
-        GameObject Sadness;
         
         // Start is called before the first frame update
         void Start()
