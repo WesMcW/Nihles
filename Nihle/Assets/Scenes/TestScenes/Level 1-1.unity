@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 43464123}
   - component: {fileID: 43464124}
+  - component: {fileID: 43464125}
   m_Layer: 11
   m_Name: HappyPlatforms_0
   m_TagString: Ground
@@ -201,6 +202,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &43464125
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43464122}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.09221196}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.375, y: 1}
+    newSize: {x: 2.375, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.375, y: 0.37456274}
+  m_EdgeRadius: 0
 --- !u!1 &978770501
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978770502}
   - component: {fileID: 978770503}
+  - component: {fileID: 978770504}
   m_Layer: 11
   m_Name: HappyPlatforms_1
   m_TagString: Ground
@@ -282,6 +310,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &978770504
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978770501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.08655596}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.375, y: 0.875}
+    newSize: {x: 2.375, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.375, y: 0.3255582}
+  m_EdgeRadius: 0
 --- !u!1 &1171858130
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920042722}
   - component: {fileID: 1920042723}
+  - component: {fileID: 1920042724}
   m_Layer: 11
   m_Name: HappyPlatforms_0
   m_TagString: Ground
@@ -588,6 +643,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1920042724
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920042721}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.09221196}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.375, y: 1}
+    newSize: {x: 2.375, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.375, y: 0.37456274}
+  m_EdgeRadius: 0
 --- !u!1 &2081869449
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081869450}
   - component: {fileID: 2081869451}
+  - component: {fileID: 2081869452}
   m_Layer: 11
   m_Name: HappyPlatforms_1 (1)
   m_TagString: Ground
@@ -669,6 +751,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2081869452
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081869449}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.08655596}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.375, y: 0.875}
+    newSize: {x: 1.375, y: 0.875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.375, y: 0.3255582}
+  m_EdgeRadius: 0
 --- !u!1001 &119440411268923495
 PrefabInstance:
   m_ObjectHideFlags: 0
