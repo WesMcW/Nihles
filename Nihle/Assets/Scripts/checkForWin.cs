@@ -49,4 +49,9 @@ public class checkForWin : MonoBehaviour
 
         GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(winScreenBtns[0].gameObject);
     }
+
+    public void nextLevel()
+    {
+        //SceneManagement.currInstance.
+    }
 }
