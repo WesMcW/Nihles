@@ -11,7 +11,7 @@ public class SceneManagement : MonoBehaviour
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
-        Debug.Log("Active scene name is: " + currentScene.name );
+        Debug.Log("Active scene name is: " + currentScene.name + "n/Current index is: " + currentScene.buildIndex);
 
     }
 
