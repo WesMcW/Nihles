@@ -13,6 +13,9 @@ public class PlayerTwoMovement : MonoBehaviour
     [SerializeField]
     float jumpSpeed = 20f;
 
+    [SerializeField]
+    public float lowJumpMultiplier = 2f;
+    public float fallMultiplier = 2.5f;
 
     public Vector2 movement;
     public Rigidbody2D rb;
@@ -36,6 +39,7 @@ public class PlayerTwoMovement : MonoBehaviour
     {
         moveCharacter(movement);
         characterJump();
+        gravity();
     }
 
     void moveCharacter(Vector2 direction)
@@ -54,6 +58,16 @@ public class PlayerTwoMovement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + jumpSpeed);
                 isGrounded = false;
             }
+        }
+    }
+
+    void gravity()
+    {
+        if (rb.velocity.y < 0)                                                                              //if button is held
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        else if (rb.velocity.y > 0 && !Input.GetButton("PlayerOneJump"))                                    //essentially the short hop
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
 
