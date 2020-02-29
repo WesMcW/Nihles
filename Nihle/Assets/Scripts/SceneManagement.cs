@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class SceneManagement : MonoBehaviour
 {
-    static SceneManager currInstance;
+    public static SceneManagement currInstance;
     Scene currentScene;
     void Start()
     {
@@ -16,7 +16,7 @@ public class SceneManagement : MonoBehaviour
 
         if (currInstance == null)
         {
-            currInstance = this.GetComponent<SceneManager>();
+            currInstance = this.GetComponent<SceneManagement>();
             DontDestroyOnLoad(this);
         }
         else
