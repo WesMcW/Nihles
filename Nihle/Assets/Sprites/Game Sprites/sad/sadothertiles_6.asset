@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: sadothertiles_6
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -5204458858969611831, guid: afa370c51665d414d888396af812cf34,
+  m_Sprite: {fileID: -5204458858969611831, guid: d5efccd241e45416b8bbed5688f16056,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
