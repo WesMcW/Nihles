@@ -25,12 +25,13 @@ public class SceneManagement : MonoBehaviour
 
     void Update()
     {
-        //If it is a level:
-        //Once condition is met, go to the next level
-        //SceneManager.LoadScene(currentScene.buildIndex + 1)
+        if (Input.GetButton("Cancel"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }   
     }
 
-    /* BELOW ARE METHODS FOR THE TITLE SCREEN */
+    /* BELOW ARE METHODS FOR THE BUTTONS */
 
     public void exitGame()
     {
