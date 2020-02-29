@@ -15,7 +15,8 @@ public class button : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2")){
+        if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0)
+        {
             collision.gameObject.transform.parent = gameObject.transform;
             animator.SetBool("isPressed", true);
             if(isPlatformButton == true) {
@@ -28,7 +29,7 @@ public class button : MonoBehaviour
     }
 
     private void OnCollisionExit2D(Collision2D collision) {
-        if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.layer == pushBlocky){
+        if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0 ){
             animator.SetBool("isPressed", false);
             collision.gameObject.transform.parent = null;
 
