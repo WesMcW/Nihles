@@ -233,27 +233,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: happytilesmaybe_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 84
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3eb97091341d98d42a0755699a043263
-      internalID: -8667054566751696912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: happytilesmaybe_3
       rect:
         serializedVersion: 2
@@ -270,48 +249,6 @@ TextureImporter:
       bones: []
       spriteID: eb189c6efcec92d4e910ee949af0c63f
       internalID: -1931230623915500495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: happytilesmaybe_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 68
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88c32ba8b19af28489d11b2803811ce1
-      internalID: 4410747353674767042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: happytilesmaybe_5
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 52
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5910167f5de462a4cb9e793bb5b5f8c5
-      internalID: 8407014446645534620
       vertices: []
       indices: 
       edges: []
@@ -359,11 +296,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: happytilesmaybe_8
+      name: happytilesmaybe_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 84
+        x: 32
+        y: 20
         width: 16
         height: 16
       alignment: 0
@@ -373,18 +310,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a087a4db453f29f4a8f8c7112b4d0404
-      internalID: 3595143964772454724
+      spriteID: 1951636a10771cc44b77a0dc33f36448
+      internalID: -8667054566751696912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: happytilesmaybe_9
+      name: happytilesmaybe_4
       rect:
         serializedVersion: 2
         x: 64
-        y: 68
+        y: 20
         width: 16
         height: 16
       alignment: 0
@@ -394,29 +331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1732389982ceae24b853fdbb660d7174
-      internalID: -1024271265277641446
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: happytilesmaybe_10
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 52
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4eccdbb7a99d64e418e2636efe5e7675
-      internalID: -1408696315467392682
+      spriteID: 434998cfa934360409bee33157fea9d1
+      internalID: 4410747353674767042
       vertices: []
       indices: 
       edges: []
