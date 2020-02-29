@@ -12,7 +12,7 @@ public class SceneManagement : MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene();
         Debug.Log("Active scene name is: " + currentScene.name + "n/Current index is: " + currentScene.buildIndex);
-
+    
     }
 
     void Update()
@@ -41,8 +41,6 @@ public class SceneManagement : MonoBehaviour
         //if we are using text mesh pro this needs to be changed
         Text buttonText = transform.Find("Text").GetComponent<Text>();
 
-        Scene levelSelect = SceneManager.GetSceneByName(buttonText.text);
-
-        SceneManager.LoadScene(levelSelect.buildIndex);
+        SceneManager.LoadScene(buttonText.text);
     }
 }
