@@ -21,4 +21,9 @@ public class PlayerInteract : MonoBehaviour
             collision.gameObject.GetComponent<PushBlock>().pushedBlock(playerNum);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
 }
