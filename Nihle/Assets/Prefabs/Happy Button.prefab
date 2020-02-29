@@ -141,6 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3768a174289f9664c9e71a8b08082203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushBlocky:
+    serializedVersion: 2
+    m_Bits: 4096
   platform: {fileID: 0}
   animator: {fileID: 6255175652638959923}
   active: {fileID: -3613609280770029465, guid: 1308c44c947c44714be87a7dbddc2dbb, type: 3}

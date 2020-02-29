@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class button : MonoBehaviour
 {
+    public LayerMask pushBlocky;
     public GameObject platform;
     public Animator animator;
     public Sprite active, inactive;
@@ -27,7 +28,7 @@ public class button : MonoBehaviour
     }
 
     private void OnCollisionExit2D(Collision2D collision) {
-        if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2")){
+        if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.layer == pushBlocky){
             animator.SetBool("isPressed", false);
             collision.gameObject.transform.parent = null;
 
