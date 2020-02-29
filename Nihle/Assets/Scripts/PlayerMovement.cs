@@ -23,10 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 movement;
     public Rigidbody2D rb;
+    private Animator anim;
 
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     
@@ -37,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         movement = new Vector2(horizontalMovement, verticalMovement);
 
-       
+        anim.SetFloat("Speed", Mathf.Abs(horizontalMovement));
     }
 
     void FixedUpdate()
