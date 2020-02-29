@@ -14,7 +14,7 @@ public class button : MonoBehaviour
     private void Awake() {
         animator = GetComponent<Animator>();
     }
-    private void OnCollisionEnter2D(Collision2D collision) {
+    private void OnCollisionStay2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0)
         {
             collision.gameObject.transform.parent = gameObject.transform;
