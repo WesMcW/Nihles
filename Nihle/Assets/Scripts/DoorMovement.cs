@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DoorMovement : MonoBehaviour
 {
+    public bool doorInUse = false;
+
     public GameObject otherDoor;
     Animator myAnim, otherAnim;
 
@@ -36,5 +38,30 @@ public class DoorMovement : MonoBehaviour
         }
 
         usedDoor = null;
+    }
+
+    public void canUseDoor()
+    {
+        doorInUse = false;
+        otherDoor.GetComponent<DoorMovement>().doorInUse = false;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!doorInUse)
+        {
+            if (collision.CompareTag("Player1") && Input.GetButtonDown("PlayerOneInteract"))
+            {
+                useDoor(collision.gameObject);
+                doorInUse = true;
+                otherDoor.GetComponent<DoorMovement>().doorInUse = true;
+            }
+            if (collision.CompareTag("Player2") && Input.GetButtonDown("PlayerTwoInteract"))
+            {
+                useDoor(collision.gameObject);
+                doorInUse = true;
+                otherDoor.GetComponent<DoorMovement>().doorInUse = true;
+            }
+        }
     }
 }
