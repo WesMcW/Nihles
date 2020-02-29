@@ -7,12 +7,20 @@ using UnityEngine.UI;
 
 public class SceneManagement : MonoBehaviour
 {
+    public static SceneManagement currInstance;
     Scene currentScene;
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
         Debug.Log("Active scene name is: " + currentScene.name + "n/Current index is: " + currentScene.buildIndex);
-    
+
+        if (currInstance == null)
+        {
+            currInstance = this.GetComponent<SceneManagement>();
+            DontDestroyOnLoad(this);
+        }
+        else
+            Destroy(gameObject); 
     }
 
     void Update()
