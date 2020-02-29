@@ -54,7 +54,6 @@ MonoBehaviour:
   jumpSpeed: 10
   lowJumpMultiplier: 2
   fallMultiplier: 2.5
-  defaultScale: 4
   movement: {x: 0, y: 0}
   rb: {fileID: 0}
 --- !u!212 &6872632025181886563
@@ -167,6 +166,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
+  sadCollect: 0
+  hapCollect: 0
+  totalCollect: 0
+  score: 0
+  otherPlayer: {fileID: 0}
 --- !u!70 &4890967286303418449
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -176,7 +180,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 6872632025181886560}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
