@@ -247,6 +247,24 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: -1, y: 9, z: 0}
+    second:
+      m_TileIndex: 18
+      m_TileSpriteIndex: 14
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 4
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 0, y: 9, z: 0}
+    second:
+      m_TileIndex: 19
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 4
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
@@ -285,6 +303,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 0ec4a5d0b41edae49a083920abdaa7ec, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 57085397811165846b07f90e76c1dcae, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 5807161225539d640848947056958488, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 36b3fcbbc34f71e47a64c1ed6fce26a4, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 3139233847584001322, guid: afa370c51665d414d888396af812cf34,
@@ -324,8 +346,14 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -8667054566751696912, guid: d8e2510bb33fd4601b82435243cff76f,
       type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1114839688840536405, guid: fd7aa8b8f1e764f25a1f209fdc5e5068,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -5929867744601733642, guid: fd7aa8b8f1e764f25a1f209fdc5e5068,
+      type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 18
+  - m_RefCount: 20
     m_Data:
       e00: 1
       e01: 0
@@ -352,7 +380,7 @@ Tilemap:
     m_Data: {r: -1.204666e-38, g: -1.204666e-38, b: -1.204666e-38, a: -1.204666e-38}
   - m_RefCount: 0
     m_Data: {r: -1.2914546e-38, g: -1.2914546e-38, b: -1.2914546e-38, a: -1.2914546e-38}
-  - m_RefCount: 18
+  - m_RefCount: 20
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: -1.3284085e-38, g: -1.3284085e-38, b: -1.3284085e-38, a: -1.3284085e-38}
