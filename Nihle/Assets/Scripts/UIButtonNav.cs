@@ -92,6 +92,7 @@ public class UIButtonNav : MonoBehaviour
     public void howToButton()
     {
         titleScreen.SetActive(false);
+        playScreen.SetActive(true);
         howToPlayScreen.SetActive(true);
         eventSystem.SetSelectedGameObject(howToPlayScreen.transform.GetChild(0).gameObject);
     }

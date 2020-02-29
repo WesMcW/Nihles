@@ -25,30 +25,6 @@ public class SceneManagement : MonoBehaviour
 
     /* BELOW ARE METHODS FOR THE TITLE SCREEN */
 
-    public void playGame()
-    {
-        //load playScreen
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void freePlay()
-    {
-        //load freePlay
-        //SceneManager.LoadScene();
-    }
-
-    public void challengeMode()
-    {
-        //load challenge mode
-        //SceneManager.LoadScene();
-    }
-
-    public void howToPlay()
-    {
-        //load how to play screen
-        //SceneManager.LoadScene();
-    }
-
     public void exitGame()
     {
         Debug.Log("Quit Game");
@@ -58,8 +34,8 @@ public class SceneManagement : MonoBehaviour
     public void previousScene()
     {
         //load previos scene or "go back"
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-
+        if(SceneManager.GetActiveScene().buildIndex > 0)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void returnToTitle()
@@ -71,8 +47,14 @@ public class SceneManagement : MonoBehaviour
     public void playLevel()
     {
         //if we are using text mesh pro this needs to be changed
+        //may not need this method 
         Text buttonText = transform.Find("Text").GetComponent<Text>();
 
-        SceneManager.LoadScene(buttonText.text);
+        SceneManager.LoadScene("Level " + buttonText.text);
+    }
+
+    public void restartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
