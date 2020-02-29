@@ -789,31 +789,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1053261599}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &517384816 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8810740699024380594, guid: f5b051c773b5cda40a593e193de3be2e,
-    type: 3}
-  m_PrefabInstance: {fileID: 2085499204}
-  m_PrefabAsset: {fileID: 0}
---- !u!68 &517384820
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517384816}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.62004757, y: -0.08399582}
-  - {x: 0.013498306, y: 0.08108592}
-  - {x: 0.72123957, y: -0.08477163}
 --- !u!4 &714980599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 291262800093202615, guid: 4f021ae0a4662304790d6535fa293a34,
@@ -1687,31 +1662,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1226231855 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8810740699561997163, guid: f5b051c773b5cda40a593e193de3be2e,
-    type: 3}
-  m_PrefabInstance: {fileID: 2085499204}
-  m_PrefabAsset: {fileID: 0}
---- !u!68 &1226231861
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226231855}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.641469, y: -0.3503834}
-  - {x: 0.0027666092, y: 0.16319214}
-  - {x: 0.6486721, y: -0.35038292}
 --- !u!4 &1267359824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7529629930700868655, guid: e72ffb9eb16b4c14ab388439d8e79a84,
@@ -1748,7 +1698,7 @@ PrefabInstance:
     - target: {fileID: 291262800093202615, guid: 4f021ae0a4662304790d6535fa293a34,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6833053
+      value: 3.73
       objectReference: {fileID: 0}
     - target: {fileID: 291262800093202615, guid: 4f021ae0a4662304790d6535fa293a34,
         type: 3}
@@ -2748,20 +2698,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8810740699024380593, guid: f5b051c773b5cda40a593e193de3be2e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8810740699024380594, guid: f5b051c773b5cda40a593e193de3be2e,
         type: 3}
       propertyPath: m_Name
       value: Sad Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 8810740699561997167, guid: f5b051c773b5cda40a593e193de3be2e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5b051c773b5cda40a593e193de3be2e, type: 3}
