@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIButtonNav : MonoBehaviour
 {
@@ -147,6 +148,6 @@ public class UIButtonNav : MonoBehaviour
     public void playLevel(int level)
     {
         //load level
-        
+        SceneManager.LoadScene(level);
     }
 }
