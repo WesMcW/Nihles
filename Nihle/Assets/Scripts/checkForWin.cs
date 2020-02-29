@@ -6,14 +6,14 @@ public class checkForWin : MonoBehaviour
 {
     public GameObject winScreen;
 
-    public GameObject p1, p2;
+    public WinCondition p1Win, p2Win;
 
     public void checkingWin()
     {
-        if(p1.GetComponent<WinCondition>().hasWon && p2.GetComponent<WinCondition>().hasWon)
+        if(p1Win.hasWon && p2Win.hasWon)
         {
-            p1.GetComponent<PlayerMovement>().enabled = false;
-            p2.GetComponent<PlayerTwoMovement>().enabled = false;
+            p1Win.GetComponent<PlayerMovement>().enabled = false;
+            p2Win.GetComponent<PlayerTwoMovement>().enabled = false;
 
             Debug.Log("Yay you won");
             winScreen.SetActive(true);
