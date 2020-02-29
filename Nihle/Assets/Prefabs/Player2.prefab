@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2125709075240656939, guid: faded09d285da4a6395fb7b84258eee3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -147,6 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 2
+  sadCollect: 0
+  hapCollect: 0
+  totalCollect: 0
+  score: 0
+  otherPlayer: {fileID: 0}
 --- !u!70 &5223809925995569584
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -180,7 +185,6 @@ MonoBehaviour:
   jumpSpeed: 10
   lowJumpMultiplier: 2
   fallMultiplier: 2.5
-  defaultScale: 4
   movement: {x: 0, y: 0}
   rb: {fileID: 0}
 --- !u!95 &31417392

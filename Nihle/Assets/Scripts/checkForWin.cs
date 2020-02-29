@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class checkForWin : MonoBehaviour
 {
     public GameObject winScreen;
+    public GameObject scoreImg;
 
     public WinCondition p1Win, p2Win;
     public GameObject p1, p2;
+
+    public Button[] winScreenBtns;
 
     public void checkingWin()
     {
@@ -18,8 +22,51 @@ public class checkForWin : MonoBehaviour
 
             Debug.Log("Yay you won");
             winScreen.SetActive(true);
-            // show score
-            // enable button navigation for win screen
+            setButtonNavs();
+
+            if (GetComponent<LevelStartup>().isFreePlay) scoreImg.SetActive(false);
+            else
+            {
+                // set score
+            }
         }
+    }
+
+    void setButtonNavs()
+    {
+        Navigation nextNav = new Navigation();
+        nextNav.mode = Navigation.Mode.Explicit;
+        nextNav.selectOnUp = winScreenBtns[2];
+        nextNav.selectOnDown = winScreenBtns[1];
+        winScreenBtns[0].navigation = nextNav;
+
+        Navigation replayNav = new Navigation();
+        replayNav.mode = Navigation.Mode.Explicit;
+        replayNav.selectOnUp = winScreenBtns[0];
+        replayNav.selectOnDown = winScreenBtns[2];
+        winScreenBtns[1].navigation = replayNav;
+
+        Navigation menuNav = new Navigation();
+        menuNav.mode = Navigation.Mode.Explicit;
+        menuNav.selectOnUp = winScreenBtns[1];
+        menuNav.selectOnDown = winScreenBtns[0];
+        winScreenBtns[2].navigation = menuNav;
+
+        GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(winScreenBtns[0].gameObject);
+    }
+
+    public void nextLevel()
+    {
+        SceneManagement.currInstance.nextLevel();
+    }
+
+    public void restart()
+    {
+        SceneManagement.currInstance.restartLevel();
+    }
+
+    public void toTitle()
+    {
+        SceneManagement.currInstance.returnToTitle();
     }
 }
