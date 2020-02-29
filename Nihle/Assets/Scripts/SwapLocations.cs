@@ -8,6 +8,9 @@ namespace swapper
     {
         GameObject player1;
         GameObject player2;
+        GameObject Happiness;
+        GameObject Sadness;
+        
         // Start is called before the first frame update
         void Start()
         {
@@ -17,17 +20,19 @@ namespace swapper
                 player2 = GameObject.FindGameObjectWithTag("Player2");
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
         void switchSpots()
         {
+            /*
             Vector2 locOfP1 = player1.transform.position;
             Vector2 locOfP2 = player2.transform.position;
             player1.transform.position = locOfP2;
             player2.transform.position = locOfP1;
+            */
+            Worlds player1World = player1.GetComponent<PlayerStats>().myWorld;
+            Worlds player2World = player2.GetComponent<PlayerStats>().myWorld;
+            player1.GetComponent<PlayerStats>().myWorld = player2World;
+            player2.GetComponent<PlayerStats>().myWorld = player1World;
+
         }
     }
 }
