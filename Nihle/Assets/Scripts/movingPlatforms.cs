@@ -5,15 +5,37 @@ using UnityEngine;
 namespace mover {
     public class movingPlatforms : MonoBehaviour {
         private GameObject platform;
-
-        [Header("These are the two points that the platform will move towards.")]
-        [SerializeField] private GameObject pointOne;
+        public float speed;
+        public float timer = 0;
+        [Tooltip("These are the two points that the platform will move towards.")]
+        [SerializeField] private GameObject pointOne, pointTwo;
         private void Awake() {
             platform = this.gameObject;
         }
 
         private void Update() {
-            platform.transform.position = new Vector3(Mathf.PingPong(Time.time, 5), pointOne.transform.position.y);
+            
+            timer += Time.deltaTime / speed;
+            if(timer >= 1) {
+                timer = 0;
+                GameObject tmp = pointOne;
+                pointOne = pointTwo;
+                pointTwo = tmp;
+            }
+           gameObject.transform.position = Vector2.Lerp(pointOne.transform.position, pointTwo.transform.position, timer);
+           
+            
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision) {
+            if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2")) {
+                collision.gameObject.transform.parent = gameObject.transform;
+            }
+        }
+        private void OnCollisionExit2D(Collision2D collision) {
+            if (collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2")) {
+                collision.gameObject.transform.parent = null;
+            }
         }
     }
 }
