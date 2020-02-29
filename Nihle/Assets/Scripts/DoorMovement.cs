@@ -16,14 +16,25 @@ public class DoorMovement : MonoBehaviour
         otherAnim = otherDoor.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void useDoor(GameObject player)
     {
-        
+        usedDoor = player;
+
+        myAnim.SetTrigger("Door");
+        otherAnim.SetTrigger("Door");
     }
 
     public void teleport()
     {
-        usedDoor.transform.position = otherDoor.transform.position;
+        if (usedDoor != null)
+        {
+            usedDoor.transform.position = otherDoor.transform.position;
+            if (usedDoor.layer == LayerMask.NameToLayer("Right")) usedDoor.layer = LayerMask.NameToLayer("Left");
+            else usedDoor.layer = LayerMask.NameToLayer("Right");
+
+            // other things that might be needed in swap
+        }
+
+        usedDoor = null;
     }
 }

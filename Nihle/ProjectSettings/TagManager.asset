@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Player1
   - Player2
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - ExtraCameras
   - Left
   - Right
-  - 
+  - PushBlock
   - 
   - 
   - 

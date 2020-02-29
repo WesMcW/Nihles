@@ -19,11 +19,11 @@ public class PlayerStats : MonoBehaviour
         myWorld = GetComponentInParent<Worlds>();
         player = gameObject.tag;
 
-        if (gameObject.CompareTag(player1))
+        if (gameObject.CompareTag(player2))
         {
             currDrive = 0;
         }
-        if (gameObject.CompareTag(player2))
+        if (gameObject.CompareTag(player1))
         {
             currDrive = 50;
         }
@@ -33,7 +33,7 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         do_I_die();
-        if ((myWorld.getHappy() && (player == player1)) || !myWorld.getHappy() && (player == player2))
+        if ((myWorld.getHappy() && (player == player2)) || !myWorld.getHappy() && (player == player1))
         {
             DeathToMe();
         }
@@ -41,7 +41,7 @@ public class PlayerStats : MonoBehaviour
     }
     void DeathToMe()
     {
-        if (player == player1)
+        if (player == player2)
         {
             if (currDrive >= maxDrive)
             {
@@ -49,7 +49,7 @@ public class PlayerStats : MonoBehaviour
                 currDrive += driveMultiplier;
             }
         }
-        if (player == player2)
+        if (player == player1)
         {
             if (currDrive <= 0)
             {
@@ -60,7 +60,7 @@ public class PlayerStats : MonoBehaviour
     }
     void do_I_die()
     {
-        if (player == player1)
+        if (player == player2)
         {
             if (currDrive >= maxDrive)
             {
@@ -68,7 +68,7 @@ public class PlayerStats : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if (player == player2)
+        if (player == player1)
         {
             if (currDrive <= 0)
             {
