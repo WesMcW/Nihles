@@ -85,6 +85,24 @@ Tilemap:
   m_GameObject: {fileID: 3980724140314418552}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -5, y: 2, z: 0}
+    second:
+      m_TileIndex: 19
+      m_TileSpriteIndex: 15
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 4
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: -4, y: 2, z: 0}
+    second:
+      m_TileIndex: 18
+      m_TileSpriteIndex: 14
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 4
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: -1, y: 2, z: 0}
     second:
       m_TileIndex: 5
@@ -285,10 +303,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 86fd6f7c11bea02479d27ab703377dda, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 366a1ead3fa91294bb6c249c58f68bf4, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 7108621fafe0dd649b6b88303d37a5b2, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 8b662e99d7919a14d8192305ec1eced9, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: a738a6cf6d7d0be48b9772fea9227a90, type: 2}
   - m_RefCount: 1
@@ -332,14 +350,14 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -8667054566751696912, guid: d8e2510bb33fd4601b82435243cff76f,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: b5b1897b2f29f5647a42632b349fac41, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 3d869d8e8bb501a4b952f1cf5c893643, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 910439545139480877, guid: d5efccd241e45416b8bbed5688f16056, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 18
+  - m_RefCount: 20
     m_Data:
       e00: 1
       e01: 0
@@ -366,7 +384,7 @@ Tilemap:
     m_Data: {r: 1.6814876e-20, g: 1.6814876e-20, b: 1.6814876e-20, a: 1.6814876e-20}
   - m_RefCount: 0
     m_Data: {r: 1.2159516e-20, g: 1.2159516e-20, b: 1.2159516e-20, a: 1.2159516e-20}
-  - m_RefCount: 18
+  - m_RefCount: 20
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: 1.2159064e-20, g: 1.2159064e-20, b: 1.2159064e-20, a: 1.2159064e-20}
