@@ -7,8 +7,8 @@ public class PlayerInteract : MonoBehaviour
     public int playerNum;
     string interactButton;
 
-    public int sadCollect, hapCollect, totalCollect, score;
-
+    public int sadCollect, hapCollect;
+    public int totalCollect, score;
     public GameObject otherPlayer;
 
     // Start is called before the first frame update
