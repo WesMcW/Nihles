@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7290787769103501577}
   - component: {fileID: 7290787769103501686}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: LeftCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1024
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: b3649c5b5ea1eff4a89af0e119102bf4, type: 2}
   m_TargetDisplay: 0
@@ -154,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7290787770041102001}
   - component: {fileID: 7290787770041102014}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: RightCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 2048
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 9b0084013d33e3440ae303659db1e289, type: 2}
   m_TargetDisplay: 0
