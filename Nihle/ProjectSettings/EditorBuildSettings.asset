@@ -8,4 +8,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 1-1.unity
+    guid: a281c6540701d554c91c1059e127fd49
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 1-2.unity
+    guid: b3bcc4b17173c0140b073378b366d8e6
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 1-3.unity
+    guid: 53a4783a3dfc56a44ac8feb636e852e8
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 2-1.unity
+    guid: 404d432b36290d44aa439bc1815c9ff2
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 2-2.unity
+    guid: 2e5c93efeb813984a85436e8738c2c23
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 2-3.unity
+    guid: 1419fd026ee7d10488eed784c2caa40b
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 3-1.unity
+    guid: e333385f6a810ba479130539e4122aa3
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 3-2.unity
+    guid: 9eabb19cfa1cd0540bba52c18d7b821b
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 3-3.unity
+    guid: c224c06088297ca4ab1173ec32cf81d6
+  - enabled: 1
+    path: Assets/Scenes/TestScenes/Level 4-1.unity
+    guid: 44e50f58f175c1b44a8b8ee984b6484e
   m_configObjects: {}
