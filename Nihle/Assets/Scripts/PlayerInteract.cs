@@ -24,4 +24,12 @@ public class PlayerInteract : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("PushBlock"))
+        {
+            collision.gameObject.GetComponent<PushBlock>().pushedBlock(playerNum);
+        }
+    }
 }
