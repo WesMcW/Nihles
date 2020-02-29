@@ -49,7 +49,7 @@ public class PlayerInteract : MonoBehaviour
     }
 
     //Give the final score
-    public void showScore()
+    public int showScore()
     {
         if(totalCollect == 6)
         {
@@ -63,5 +63,7 @@ public class PlayerInteract : MonoBehaviour
         {
             score = 1;
         }
+
+        return score;
     }
 }
