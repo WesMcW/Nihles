@@ -19,8 +19,7 @@ public class SceneManagement : MonoBehaviour
     {
         //If it is a level:
         //Once condition is met, go to the next level
-        //SceneManager.LoadScene(currentScene.buildIndex + 1);
-
+        //SceneManager.LoadScene(currentScene.buildIndex + 1)
     }
 
     /* BELOW ARE METHODS FOR THE TITLE SCREEN */
@@ -56,5 +55,10 @@ public class SceneManagement : MonoBehaviour
     public void restartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void nextLevel()
+    {
+        SceneManager.LoadScene(currentScene.buildIndex + 1);
     }
 }
