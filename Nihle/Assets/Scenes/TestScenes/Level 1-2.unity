@@ -1262,6 +1262,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4381307591595615059, guid: 0f06a911acea34748956817293987ef9,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 1601440825}
     - target: {fileID: 6124607198878978433, guid: 0f06a911acea34748956817293987ef9,
         type: 3}
       propertyPath: m_Name
@@ -1270,12 +1275,12 @@ PrefabInstance:
     - target: {fileID: 6124607198878978436, guid: 0f06a911acea34748956817293987ef9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.6414704
+      value: 2.33
       objectReference: {fileID: 0}
     - target: {fileID: 6124607198878978436, guid: 0f06a911acea34748956817293987ef9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1393566
+      value: -2.72
       objectReference: {fileID: 0}
     - target: {fileID: 6124607198878978436, guid: 0f06a911acea34748956817293987ef9,
         type: 3}
@@ -1331,6 +1336,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3986547329276357298, guid: 48dbac2a32fbb8046873124db8695b24,
+        type: 3}
+      propertyPath: otherPlayer
+      value: 
+      objectReference: {fileID: 1396165365}
     - target: {fileID: 6872632025181886560, guid: 48dbac2a32fbb8046873124db8695b24,
         type: 3}
       propertyPath: m_Name
@@ -2805,6 +2815,12 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!1 &1396165365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6124607198878978433, guid: 0f06a911acea34748956817293987ef9,
+    type: 3}
+  m_PrefabInstance: {fileID: 527031677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1453395013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3114,6 +3130,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208cbef9808d17e4b805194b5c6c5971, type: 3}
+--- !u!1 &1601440825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6872632025181886560, guid: 48dbac2a32fbb8046873124db8695b24,
+    type: 3}
+  m_PrefabInstance: {fileID: 556859658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1625869358
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,7 +3502,7 @@ PrefabInstance:
     - target: {fileID: 7096254279414012082, guid: 4b44b38a744132b46889f08f87479dba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7096254279414012082, guid: 4b44b38a744132b46889f08f87479dba,
         type: 3}
@@ -3884,9 +3906,29 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 6852272995355077755}
+    m_ColliderPaths:
+    - - X: -90000000
+        Y: -40000000
+      - X: -90000000
+        Y: -50000000
+      - X: 0
+        Y: -50000000
+      - X: 0
+        Y: 50000000
+      - X: -10000000
+        Y: 50000000
+      - X: -10000000
+        Y: -40000000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: -0.000029300001, y: -5}
+      - {x: -0.000029300001, y: 5}
+      - {x: -1, y: 4.999971}
+      - {x: -1.0000294, y: -4}
+      - {x: -9, y: -4.000029}
+      - {x: -8.99997, y: -5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &6852272995355077754
@@ -3922,7 +3964,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
