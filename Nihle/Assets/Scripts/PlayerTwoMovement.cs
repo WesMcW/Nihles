@@ -54,11 +54,11 @@ public class PlayerTwoMovement : MonoBehaviour
         Vector3 playerScale = transform.localScale;
         if (horizontalMovement < 0)
         {
-            playerScale.x = defaultScale;
+            playerScale.x = -1;
         }
         else if (horizontalMovement > 0)
         {
-            playerScale.x = -defaultScale;
+            playerScale.x = 1;
         }
 
         transform.localScale = playerScale;
@@ -71,7 +71,8 @@ public class PlayerTwoMovement : MonoBehaviour
             if (Input.GetButton("PlayerTwoJump"))
             {
                 Debug.Log("Jumped");
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + jumpSpeed);
+                //rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + jumpSpeed);
+                rb.velocity = Vector2.up * jumpSpeed;
                 isGrounded = false;
             }
         }
@@ -81,7 +82,7 @@ public class PlayerTwoMovement : MonoBehaviour
     {
         if (rb.velocity.y < 0)                                                                              //if button is held
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        else if (rb.velocity.y > 0 && !Input.GetButton("PlayerOneJump"))                                    //essentially the short hop
+        else if (rb.velocity.y > 0 && !Input.GetButton("PlayerTwoJump"))                                    //essentially the short hop
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }

@@ -56,10 +56,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 playerScale = transform.localScale;
         if(horizontalMovement < 0)
         {
-            playerScale.x = defaultScale;
+            playerScale.x = -1;
         } else if (horizontalMovement > 0)
         {
-            playerScale.x = -defaultScale;
+            playerScale.x = 1;
         }
 
         transform.localScale = playerScale;
