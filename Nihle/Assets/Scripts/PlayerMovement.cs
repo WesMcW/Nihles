@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
     public float lowJumpMultiplier = 2f;
     public float fallMultiplier = 2.5f;
 
+    [SerializeField]
+    float defaultScale = 4;
+
     public Vector2 movement;
     public Rigidbody2D rb;
 
@@ -48,6 +51,18 @@ public class PlayerMovement : MonoBehaviour
     void moveCharacter(Vector2 direction)
     {
         rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
+
+        //flips character sprite based on movement
+        Vector3 playerScale = transform.localScale;
+        if(horizontalMovement < 0)
+        {
+            playerScale.x = defaultScale;
+        } else if (horizontalMovement > 0)
+        {
+            playerScale.x = -defaultScale;
+        }
+
+        transform.localScale = playerScale;
     }
 
     void characterJump()
