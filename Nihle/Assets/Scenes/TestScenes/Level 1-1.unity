@@ -416,8 +416,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 3, y: 2, z: 0}
     second:
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 6
       m_ObjectToInstantiate: {fileID: 0}
@@ -425,8 +425,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 4, y: 2, z: 0}
     second:
-      m_TileIndex: 6
-      m_TileSpriteIndex: 0
+      m_TileIndex: 9
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 6
       m_ObjectToInstantiate: {fileID: 0}
@@ -434,8 +434,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 5, y: 2, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 1
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 6
       m_ObjectToInstantiate: {fileID: 0}
@@ -488,7 +488,7 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 64bf1d17d5fa61944b6ce6d1569c2553, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 80dbf9d6e5cede5488a9c5f15b898906, type: 2}
@@ -500,15 +500,21 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 84cb34c70dbe93c468c14fc030be7953, type: 2}
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: 80aa7d58c79af34458074c443020c2a4, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 67c0949b8b055974584a7472fd3ecbf4, type: 2}
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 83bf062dd185be64789f5f270033226c, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 0839fce8ff511eb47976aaad702a311b, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: ecd58f004a085164bac8071e2c3271c6, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: c7b8032621a8dcb479125c451100ca2a, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: -8667054566751696912, guid: d8e2510bb33fd4601b82435243cff76f,
       type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 8407014446645534620, guid: d8e2510bb33fd4601b82435243cff76f,
       type: 3}
   - m_RefCount: 1
@@ -525,8 +531,17 @@ Tilemap:
   - m_RefCount: 8
     m_Data: {fileID: -1931230623915500495, guid: d8e2510bb33fd4601b82435243cff76f,
       type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data: {fileID: 4410747353674767042, guid: d8e2510bb33fd4601b82435243cff76f,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1408696315467392682, guid: d8e2510bb33fd4601b82435243cff76f,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 3595143964772454724, guid: d8e2510bb33fd4601b82435243cff76f,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1024271265277641446, guid: d8e2510bb33fd4601b82435243cff76f,
       type: 3}
   m_TileMatrixArray:
   - m_RefCount: 31
@@ -630,7 +645,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointOne: {fileID: 0}
-  pointTwo: {fileID: 0}
 --- !u!212 &941168609
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -939,25 +953,25 @@ Tilemap:
     m_Data:
       e00: NaN
       e01: NaN
-      e02: 0
-      e03: 0
+      e02: 422.38794
+      e03: 0.0007141959
       e10: NaN
       e11: NaN
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 0
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 0
+      e12: 8.86e-43
+      e13: 8.86e-43
+      e20: 0.1624829
+      e21: 0.16248417
+      e22: -4.1166213e+9
+      e23: 0.16248417
+      e30: 8.86e-43
+      e31: 8.86e-43
+      e32: 4.5915e-41
+      e33: 8.86e-43
   m_TileColorArray:
   - m_RefCount: 0
     m_Data: {r: -1.1776019e-38, g: -1.1776019e-38, b: -1.1776019e-38, a: -1.1776019e-38}
   - m_RefCount: 0
-    m_Data: {r: -1.1721626e-38, g: -1.1721626e-38, b: -1.1721626e-38, a: -1.1721626e-38}
+    m_Data: {r: 1.8692649e-38, g: 1.8692649e-38, b: 1.8692649e-38, a: 1.8692649e-38}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -9, y: -11, z: 0}
