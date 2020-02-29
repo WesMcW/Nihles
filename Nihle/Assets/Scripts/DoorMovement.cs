@@ -50,13 +50,13 @@ public class DoorMovement : MonoBehaviour
     {
         if (!doorInUse)
         {
-            if (collision.CompareTag("Player1") && Input.GetButtonDown("PlayerOneInteract"))
+            if (collision.CompareTag("Player1") && Input.GetButton("PlayerOneInteract"))
             {
                 useDoor(collision.gameObject);
                 doorInUse = true;
                 otherDoor.GetComponent<DoorMovement>().doorInUse = true;
             }
-            if (collision.CompareTag("Player2") && Input.GetButtonDown("PlayerTwoInteract"))
+            if (collision.CompareTag("Player2") && Input.GetButton("PlayerTwoInteract"))
             {
                 useDoor(collision.gameObject);
                 doorInUse = true;
