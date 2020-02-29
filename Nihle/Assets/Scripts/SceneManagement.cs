@@ -41,6 +41,6 @@ public class SceneManagement : MonoBehaviour
         //if we are using text mesh pro this needs to be changed
         Text buttonText = transform.Find("Text").GetComponent<Text>();
 
-        SceneManager.LoadScene(buttonText.text);
+        SceneManager.LoadScene("Level " + buttonText.text);
     }
 }
