@@ -104,6 +104,15 @@ public class UILevelButtons : MonoBehaviour
         for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel"); i++)
         {
             LevelButtons[i].interactable = true;
+
+            string playPref = "Level" + i + "Score";
+            if(PlayerPrefs.GetInt(playPref) > 0)
+            {
+                for(int j = 0; j < PlayerPrefs.GetInt(playPref); j++)
+                {
+                    LevelButtons[i].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
+                }
+            }
         }
     }
 }
