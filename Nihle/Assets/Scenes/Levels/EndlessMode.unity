@@ -988,6 +988,7 @@ MonoBehaviour:
   - {fileID: 8471546587095135962, guid: fafba9c93ee383640845de0c03e68dd2, type: 3}
   - {fileID: 2417426893026742060, guid: fed1c26348212a44cbf215242a656506, type: 3}
   - {fileID: 2507460630910703769, guid: f5ff3c1330f0b3e4287771bfefea8391, type: 3}
+  - {fileID: 1072521620932775817, guid: 4253daa06c2e7474a9c6ac5732a98360, type: 3}
   - {fileID: 2148482797310283608, guid: 6008f9a2b750efb4fa015b38f54b296d, type: 3}
   happyPrefabs:
   - {fileID: 7550221807434391021, guid: 1dcadf783ad8f8649aa7494f053cce57, type: 3}

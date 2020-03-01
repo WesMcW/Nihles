@@ -31,7 +31,7 @@ public class GeneratePlatforms : MonoBehaviour
         Instantiate(sadPrefabs[sadPick], placement, Quaternion.identity);
 
         // place happy pick, check if its special or not
-        if (sadPick != 3)
+        if (sadPick != 3 && sadPick != 4)
         {
             happyPick = chooseRandom(happyPick, true);
             Instantiate(happyPrefabs[happyPick], new Vector3Int(1, placement.y, 0), Quaternion.identity);
