@@ -117,6 +117,8 @@ public class checkForWin : MonoBehaviour
                 int currLevel = SceneManager.GetActiveScene().buildIndex;
                 if (PlayerPrefs.GetInt("MaxLevel") < currLevel + 1) PlayerPrefs.SetInt("MaxLevel", currLevel + 1);
 
+                if (PlayerPrefs.GetInt("MaxLevel") >= 16) checkForHundo();
+
                 string playPref = "Level" + currLevel + "Score";
                 Debug.Log(playPref + ", " + finalScore);
                 if (finalScore > PlayerPrefs.GetInt(playPref)) PlayerPrefs.SetInt(playPref, finalScore);
@@ -128,5 +130,18 @@ public class checkForWin : MonoBehaviour
             int score = Mathf.RoundToInt(GameObject.Find("EndlessManager").GetComponent<StartEndless>().totalTime);
             endlessScoreTxt.text = "Final Score: " + score;
         }
+    }
+
+    void checkForHundo()
+    {
+        for(int i = 1; i < 16; i++)
+        {
+            string level = "Level" + i + "Score";
+            if (PlayerPrefs.GetInt(level) != 3) return;
+        }
+
+        // yay 100%
+        Debug.Log("endless mode unlocked");
+        PlayerPrefs.SetInt("Progress", 100);
     }
 }

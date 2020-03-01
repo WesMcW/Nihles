@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level 5-3.unity
     guid: eaa52ada085b493458517ac39e541028
+  - enabled: 1
+    path: Assets/Scenes/Levels/EndlessMode.unity
+    guid: fb0a805d13db8964092b13ab6b155ac4
   m_configObjects: {}
