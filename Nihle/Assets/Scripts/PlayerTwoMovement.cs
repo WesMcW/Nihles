@@ -102,4 +102,13 @@ public class PlayerTwoMovement : MonoBehaviour
         if (collision.CompareTag("Ground"))
             isGrounded = true;
     }
+
+    public void disableThings()
+    {
+        rb.velocity = Vector2.zero;
+        anim.SetBool("onGround", true);
+        anim.SetFloat("Speed", 0);
+
+        this.enabled = false;
+    }
 }
