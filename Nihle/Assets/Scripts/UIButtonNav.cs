@@ -42,13 +42,6 @@ public class UIButtonNav : MonoBehaviour
         playScreen.SetActive(false);
         challengeScreen.SetActive(false);
         freePlayScreen.SetActive(false);
-
-            PlayerPrefs.SetInt("MaxLevel", 16);
-            for (int i = 1; i < 15; i++)
-            {
-                string level = "Level" + i + "Score";
-                PlayerPrefs.SetInt(level, 3);
-            }
     }
 
     private void Update()
@@ -176,7 +169,11 @@ public class UIButtonNav : MonoBehaviour
 
     public void backButton2()
     {
-        if (challengeScreen.activeInHierarchy) challengeScreen.SetActive(false);
+        if (challengeScreen.activeInHierarchy)
+        {
+            challengeScreen.SetActive(false);
+            challengeScreen.GetComponent<UILevelButtons>().totalCompletion = 0;
+        }
         if (freePlayScreen.activeInHierarchy) freePlayScreen.SetActive(false);
 
         playScreen.SetActive(true);
