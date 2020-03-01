@@ -13,7 +13,11 @@ public class GeneratePlatforms : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //placement = Vector3Int()
+        placement = new Vector3Int(-9, -4, 0);
+        startPlatforms();
+        startPlatforms();
+        startPlatforms();
+
     }
 
     // Update is called once per frame
@@ -25,7 +29,11 @@ public class GeneratePlatforms : MonoBehaviour
     public void startPlatforms()
     {
         sadPick = chooseRandom(sadPick);
+        Instantiate(sadPrefabs[sadPick], placement, Quaternion.identity);
 
+        // place happy pick, check if its special or not
+
+        placement = new Vector3Int(-9, placement.y + 4, 0);
     }
 
     int chooseRandom(int pick)
