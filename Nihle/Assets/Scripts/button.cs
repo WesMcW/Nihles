@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using mover;
 public class button : MonoBehaviour
 {
     public LayerMask pushBlocky;
@@ -10,6 +10,7 @@ public class button : MonoBehaviour
     public Sprite active, inactive;
     public bool isPlatformButton;
     public bool isWorldChangeButton;
+    public bool isDisappearing = false;
 
     private void Awake() {
         animator = GetComponent<Animator>();
@@ -19,8 +20,12 @@ public class button : MonoBehaviour
         {
             collision.gameObject.transform.parent = gameObject.transform;
             animator.SetBool("isPressed", true);
-            if(isPlatformButton == true) {
+            if(isPlatformButton == true && !isDisappearing) {
                 enablePlatform();
+            }
+            if(isDisappearing && isPlatformButton)
+            {
+                platform.SetActive(false);
             }
             if(isWorldChangeButton == true) {
 
@@ -32,8 +37,16 @@ public class button : MonoBehaviour
         if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0 ){
             animator.SetBool("isPressed", false);
             collision.gameObject.transform.parent = null;
+            if (isDisappearing && isPlatformButton)
+            {
+                print("Disappear");
+                platform.SetActive(true);
+            }
+            if (isPlatformButton == true && !isDisappearing)
+            {
+                disablePlatform();
+            }
 
-            disablePlatform();
         }
     }
 
