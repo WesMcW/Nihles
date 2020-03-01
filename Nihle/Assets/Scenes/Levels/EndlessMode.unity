@@ -295,7 +295,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 439.9}
-  m_SizeDelta: {x: 212.1, y: 152.3}
+  m_SizeDelta: {x: 339.5, y: 152.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &200483754
 MonoBehaviour:
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18823531, g: 0.10196079, b: 0.36862746, a: 0.65882355}
+  m_Color: {r: 0.13575716, g: 0.08788716, b: 0.23584908, a: 0.65882355}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -988,10 +988,12 @@ MonoBehaviour:
   - {fileID: 8471546587095135962, guid: fafba9c93ee383640845de0c03e68dd2, type: 3}
   - {fileID: 2417426893026742060, guid: fed1c26348212a44cbf215242a656506, type: 3}
   - {fileID: 2507460630910703769, guid: f5ff3c1330f0b3e4287771bfefea8391, type: 3}
+  - {fileID: 2148482797310283608, guid: 6008f9a2b750efb4fa015b38f54b296d, type: 3}
   happyPrefabs:
   - {fileID: 7550221807434391021, guid: 1dcadf783ad8f8649aa7494f053cce57, type: 3}
   - {fileID: 6628819122559741260, guid: b0056d80c31fa004f8a7f61195954297, type: 3}
   - {fileID: 7667637534843241610, guid: 1ae23efe57f3a95478c445c53680b293, type: 3}
+  - {fileID: 2359419572865349836, guid: 07ee9963d82f9d644b1ccc9918429575, type: 3}
 --- !u!1 &969386900
 GameObject:
   m_ObjectHideFlags: 0
