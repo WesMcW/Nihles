@@ -105,6 +105,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: sadPlatformsRegular
       objectReference: {fileID: 0}
+    - target: {fileID: 4306389975178838421, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306389975178838421, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f3768461c94aa43a9103c51142e434, type: 3}
 --- !u!4 &3178840297879984341 stripped
@@ -124,6 +134,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HappyPlatformsRegular (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6010406865215258474, guid: 566087513913d554bbc1365343314029,
         type: 3}
@@ -255,6 +275,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: sadPlatformsRegular (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4306389975178838421, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306389975178838421, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f3768461c94aa43a9103c51142e434, type: 3}
 --- !u!1 &3451647034516530031 stripped
@@ -336,6 +366,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: sadPlatformsRegular (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4306389975178838421, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306389975178838421, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f3768461c94aa43a9103c51142e434, type: 3}
 --- !u!4 &3462892733500504758 stripped
@@ -355,6 +395,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HappyPlatformsRegular (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6010406865215258474, guid: 566087513913d554bbc1365343314029,
         type: 3}
@@ -516,6 +566,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: HappyPlatformsRegular (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6010406865215258474, guid: 566087513913d554bbc1365343314029,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -590,6 +650,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HappyPlatformsRegular
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6010406865215258474, guid: 566087513913d554bbc1365343314029,
         type: 3}
