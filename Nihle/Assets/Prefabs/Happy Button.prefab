@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6255175652638959925}
   - component: {fileID: 1803503425186196285}
   - component: {fileID: 8935612002684346199}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Square (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -151,6 +151,8 @@ MonoBehaviour:
   inactive: {fileID: 971167750745284948, guid: 1308c44c947c44714be87a7dbddc2dbb, type: 3}
   isPlatformButton: 1
   isWorldChangeButton: 0
+  isDisappearing: 0
+  myChildren: []
 --- !u!68 &8935612002684346199
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -182,7 +184,7 @@ GameObject:
   - component: {fileID: 6255175653174495465}
   - component: {fileID: 6255175653174495467}
   - component: {fileID: 3049252797741538347}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Happy Button
   m_TagString: Ground
   m_Icon: {fileID: 0}
