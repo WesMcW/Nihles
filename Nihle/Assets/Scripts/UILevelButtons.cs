@@ -99,7 +99,8 @@ public class UILevelButtons : MonoBehaviour
 
             Navigation backNav = new Navigation();
             backNav.mode = Navigation.Mode.Explicit;
-            backNav.selectOnUp = LevelButtons[PlayerPrefs.GetInt("MaxLevel") - 1];
+            if (PlayerPrefs.GetInt("MaxLevel") < 16) backNav.selectOnUp = LevelButtons[PlayerPrefs.GetInt("MaxLevel") - 1];
+            else backNav.selectOnUp = LevelButtons[14];
             backNav.selectOnDown = LevelButtons[0];
             backBtn.navigation = backNav;
         }
@@ -115,11 +116,12 @@ public class UILevelButtons : MonoBehaviour
             {
                 LevelButtons[0].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
                 Debug.Log("Add Star for Level " + j);
+                totalCompletion++;
             }
         }
 
         // shows collectables found in each level
-        for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel"); i++)
+        for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel") - 1; i++)
         {
             LevelButtons[i].interactable = true;
 
