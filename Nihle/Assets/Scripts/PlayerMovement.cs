@@ -101,4 +101,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Ground") || collision.CompareTag("PushBlock"))
             isGrounded = true;
     }
+
+    public void disableThings()
+    {
+        rb.velocity = Vector2.zero;
+        anim.SetBool("onGround", true);
+        anim.SetFloat("Speed", 0);
+
+        this.enabled = false;
+    }
 }

@@ -20,40 +20,11 @@ public class checkForWin : MonoBehaviour
     {
         if(p1Win.hasWon && p2Win.hasWon)
         {
-            p1.GetComponent<PlayerMovement>().enabled = false;
-            p2.GetComponent<PlayerTwoMovement>().enabled = false;
+            p1.GetComponent<PlayerMovement>().disableThings();
+            p2.GetComponent<PlayerTwoMovement>().disableThings();
 
             Debug.Log("Yay you won");
-            winScreen.SetActive(true);
-            setButtonNavs();
-
-            if (GetComponent<LevelStartup>().isFreePlay) scoreImg.SetActive(false);
-            else
-            {
-                // set score
-                scoreImg.SetActive(true);
-
-                int finalScore = p1.GetComponent<PlayerInteract>().showScore();
-                if(finalScore > 0)
-                {
-                    scoreImg.transform.GetChild(0).GetComponent<Image>().sprite = star;
-                    if(finalScore > 1)
-                    {
-                        scoreImg.transform.GetChild(1).GetComponent<Image>().sprite = star;
-                        if(finalScore > 2)
-                        {
-                            scoreImg.transform.GetChild(2).GetComponent<Image>().sprite = star;
-                        }
-                    }
-                }
-
-                int currLevel = SceneManager.GetActiveScene().buildIndex;
-                if (PlayerPrefs.GetInt("MaxLevel") < currLevel + 1) PlayerPrefs.SetInt("MaxLevel", currLevel + 1);
-
-                string playPref = "Level" + currLevel + "Score";
-                Debug.Log(playPref + ", " + finalScore);
-                if (finalScore > PlayerPrefs.GetInt(playPref)) PlayerPrefs.SetInt(playPref, finalScore);
-            }
+            Invoke("enableWinScreen", 0.5F);
         }
     }
 
@@ -61,20 +32,20 @@ public class checkForWin : MonoBehaviour
     {
         Navigation nextNav = new Navigation();
         nextNav.mode = Navigation.Mode.Explicit;
-        nextNav.selectOnUp = winScreenBtns[2];
-        nextNav.selectOnDown = winScreenBtns[1];
+        nextNav.selectOnLeft = winScreenBtns[2];
+        nextNav.selectOnRight = winScreenBtns[1];
         winScreenBtns[0].navigation = nextNav;
 
         Navigation replayNav = new Navigation();
         replayNav.mode = Navigation.Mode.Explicit;
-        replayNav.selectOnUp = winScreenBtns[0];
-        replayNav.selectOnDown = winScreenBtns[2];
+        replayNav.selectOnLeft = winScreenBtns[0];
+        replayNav.selectOnRight = winScreenBtns[2];
         winScreenBtns[1].navigation = replayNav;
 
         Navigation menuNav = new Navigation();
         menuNav.mode = Navigation.Mode.Explicit;
-        menuNav.selectOnUp = winScreenBtns[1];
-        menuNav.selectOnDown = winScreenBtns[0];
+        menuNav.selectOnLeft = winScreenBtns[1];
+        menuNav.selectOnRight = winScreenBtns[0];
         winScreenBtns[2].navigation = menuNav;
 
         GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(winScreenBtns[0].gameObject);
@@ -93,5 +64,39 @@ public class checkForWin : MonoBehaviour
     public void toTitle()
     {
         SceneManagement.currInstance.returnToTitle();
+    }
+
+    void enableWinScreen()
+    {
+        winScreen.SetActive(true);
+        setButtonNavs();
+
+        if (GetComponent<LevelStartup>().isFreePlay) scoreImg.SetActive(false);
+        else
+        {
+            // set score
+            scoreImg.SetActive(true);
+
+            int finalScore = p1.GetComponent<PlayerInteract>().showScore();
+            if (finalScore > 0)
+            {
+                scoreImg.transform.GetChild(0).GetComponent<Image>().sprite = star;
+                if (finalScore > 1)
+                {
+                    scoreImg.transform.GetChild(1).GetComponent<Image>().sprite = star;
+                    if (finalScore > 2)
+                    {
+                        scoreImg.transform.GetChild(2).GetComponent<Image>().sprite = star;
+                    }
+                }
+            }
+
+            int currLevel = SceneManager.GetActiveScene().buildIndex;
+            if (PlayerPrefs.GetInt("MaxLevel") < currLevel + 1) PlayerPrefs.SetInt("MaxLevel", currLevel + 1);
+
+            string playPref = "Level" + currLevel + "Score";
+            Debug.Log(playPref + ", " + finalScore);
+            if (finalScore > PlayerPrefs.GetInt(playPref)) PlayerPrefs.SetInt(playPref, finalScore);
+        }
     }
 }
