@@ -31,7 +31,8 @@ public class PlayerTwoMovement : MonoBehaviour
     void Update()
     {
         //gets horizontal movement from controller
-        horizontalMovement = Input.GetAxisRaw("MoveHorizontalTwo");
+        if (Input.GetJoystickNames()[1].Length == 33 || Input.GetJoystickNames()[1].Length == 19) horizontalMovement = Input.GetAxisRaw("MoveHorizontalTwo");
+        else horizontalMovement = Input.GetAxisRaw("PlayerTwoKeyMove");
 
         movement = new Vector2(horizontalMovement, verticalMovement);
 
