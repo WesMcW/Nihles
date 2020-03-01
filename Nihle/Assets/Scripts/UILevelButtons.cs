@@ -15,50 +15,95 @@ public class UILevelButtons : MonoBehaviour
     void Start()
     {
         setNavigations();
-        if (!isFree) updateCollectables();
 
         eventSystem = GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void setNavigations()
     {
         Navigation[] navs = new Navigation[15];
 
-        for(int i = 0; i < 15; i++)
+        if (isFree)
         {
-            navs[i] = new Navigation();
-            navs[i].mode = Navigation.Mode.Explicit;
+            for (int i = 0; i < 15; i++)
+            {
+                navs[i] = new Navigation();
+                navs[i].mode = Navigation.Mode.Explicit;
 
-            if (i - 3 < 0) navs[i].selectOnUp = backBtn;
-            else navs[i].selectOnUp = LevelButtons[i - 3];
+                if (i - 3 < 0) navs[i].selectOnUp = backBtn;
+                else navs[i].selectOnUp = LevelButtons[i - 3];
 
-            if (i + 3 > 14) navs[i].selectOnDown = backBtn;
-            else navs[i].selectOnDown = LevelButtons[i + 3];
+                if (i + 3 > 14) navs[i].selectOnDown = backBtn;
+                else navs[i].selectOnDown = LevelButtons[i + 3];
 
-            if (i - 1 < 0) navs[i].selectOnLeft = LevelButtons[14];
-            else navs[i].selectOnLeft = LevelButtons[i - 1];
+                if (i - 1 < 0) navs[i].selectOnLeft = LevelButtons[14];
+                else navs[i].selectOnLeft = LevelButtons[i - 1];
 
-            if (i + 1 > 14) navs[i].selectOnRight = LevelButtons[0];
-            else navs[i].selectOnRight = LevelButtons[i + 1];
+                if (i + 1 > 14) navs[i].selectOnRight = LevelButtons[0];
+                else navs[i].selectOnRight = LevelButtons[i + 1];
 
-            LevelButtons[i].navigation = navs[i];
+                LevelButtons[i].navigation = navs[i];
+            }
+
+            Navigation backNav = new Navigation();
+            backNav.mode = Navigation.Mode.Explicit;
+            backNav.selectOnUp = LevelButtons[13];
+            backNav.selectOnDown = LevelButtons[0];
+            backBtn.navigation = backNav;
         }
+        else
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                navs[i] = new Navigation();
+                navs[i].mode = Navigation.Mode.Explicit;
 
-        Navigation backNav = new Navigation();
-        backNav.mode = Navigation.Mode.Explicit;
-        backNav.selectOnUp = LevelButtons[13];
-        backNav.selectOnDown = LevelButtons[0];
-        backBtn.navigation = backNav;
+                if (i - 3 < 0) navs[i].selectOnUp = backBtn;
+                else
+                {
+                    if (LevelButtons[i - 3].interactable) navs[i].selectOnUp = LevelButtons[i - 3];
+                    else navs[i].selectOnUp = backBtn;
+                }
+
+                if (i + 3 > 14) navs[i].selectOnDown = backBtn;
+                else
+                {
+                    if (LevelButtons[i + 3].interactable) navs[i].selectOnDown = LevelButtons[i + 3];
+                    else navs[i].selectOnDown = backBtn;
+                }
+
+                if (i - 1 < 0 && LevelButtons[14].interactable) navs[i].selectOnLeft = LevelButtons[14];
+                else if (i - 1 < 0 && !LevelButtons[14].interactable) navs[i].selectOnLeft = LevelButtons[PlayerPrefs.GetInt("MaxLevel") - 1];
+                else
+                {
+                    navs[i].selectOnLeft = LevelButtons[i - 1];
+                }
+
+                if (i + 1 > 14 || !LevelButtons[i + 1].interactable) navs[i].selectOnRight = LevelButtons[0];
+                else
+                {
+                    navs[i].selectOnRight = LevelButtons[i + 1];
+                }
+
+                LevelButtons[i].navigation = navs[i];
+            }
+
+            Navigation backNav = new Navigation();
+            backNav.mode = Navigation.Mode.Explicit;
+            backNav.selectOnUp = LevelButtons[PlayerPrefs.GetInt("MaxLevel") - 1];
+            backNav.selectOnDown = LevelButtons[0];
+            backBtn.navigation = backNav;
+        }
     }
 
     public void updateCollectables()
     {
+        LevelButtons[0].interactable = true;
+
         // shows collectables found in each level
+        for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel"); i++)
+        {
+            LevelButtons[i].interactable = true;
+        }
     }
 }

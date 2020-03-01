@@ -192,6 +192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HappyCollectible (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7592986811693595709, guid: 52d6fae076c38ed4a931513809c32f0d,
+        type: 3}
+      propertyPath: m_TagString
+      value: hapCollect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d6fae076c38ed4a931513809c32f0d, type: 3}
 --- !u!1 &43464122
@@ -659,6 +664,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SadCollectable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5109041605164692985, guid: 208cbef9808d17e4b805194b5c6c5971,
+        type: 3}
+      propertyPath: m_TagString
+      value: sadCollect
+      objectReference: {fileID: 0}
     - target: {fileID: 5109041605164692986, guid: 208cbef9808d17e4b805194b5c6c5971,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -713,6 +723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109041605342636290, guid: 208cbef9808d17e4b805194b5c6c5971,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208cbef9808d17e4b805194b5c6c5971, type: 3}
@@ -797,6 +812,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HappyCollectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592986811693595709, guid: 52d6fae076c38ed4a931513809c32f0d,
+        type: 3}
+      propertyPath: m_TagString
+      value: hapCollect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d6fae076c38ed4a931513809c32f0d, type: 3}
@@ -939,6 +959,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2139488180}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &749330858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5109041605342636288, guid: 208cbef9808d17e4b805194b5c6c5971,
+    type: 3}
+  m_PrefabInstance: {fileID: 5109041604507638180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &749330863
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749330858}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &863631420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1565,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c09f4ae9e4295e4a92a8dfc097b944a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &964484145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5109041605342636288, guid: 208cbef9808d17e4b805194b5c6c5971,
+    type: 3}
+  m_PrefabInstance: {fileID: 393004184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &964484150
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964484145}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &978770501
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,6 +2617,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872632025181886566, guid: 48dbac2a32fbb8046873124db8695b24,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.32151675
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872632025181886566, guid: 48dbac2a32fbb8046873124db8695b24,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.60492325
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48dbac2a32fbb8046873124db8695b24, type: 3}
@@ -4534,6 +4618,33 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!1 &2005473624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5109041605342636288, guid: 208cbef9808d17e4b805194b5c6c5971,
+    type: 3}
+  m_PrefabInstance: {fileID: 2139488180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &2005473629
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005473624}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2046516379
 GameObject:
   m_ObjectHideFlags: 0
@@ -4898,6 +5009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SadCollectable
       objectReference: {fileID: 0}
+    - target: {fileID: 5109041605164692985, guid: 208cbef9808d17e4b805194b5c6c5971,
+        type: 3}
+      propertyPath: m_TagString
+      value: sadCollect
+      objectReference: {fileID: 0}
     - target: {fileID: 5109041605164692986, guid: 208cbef9808d17e4b805194b5c6c5971,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4952,6 +5068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109041605342636290, guid: 208cbef9808d17e4b805194b5c6c5971,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208cbef9808d17e4b805194b5c6c5971, type: 3}
@@ -5189,6 +5310,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SadCollectable
       objectReference: {fileID: 0}
+    - target: {fileID: 5109041605164692985, guid: 208cbef9808d17e4b805194b5c6c5971,
+        type: 3}
+      propertyPath: m_TagString
+      value: sadCollect
+      objectReference: {fileID: 0}
     - target: {fileID: 5109041605164692986, guid: 208cbef9808d17e4b805194b5c6c5971,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5243,6 +5369,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109041605342636290, guid: 208cbef9808d17e4b805194b5c6c5971,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208cbef9808d17e4b805194b5c6c5971, type: 3}
@@ -5317,6 +5448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HappyCollectible
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592986811693595709, guid: 52d6fae076c38ed4a931513809c32f0d,
+        type: 3}
+      propertyPath: m_TagString
+      value: hapCollect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d6fae076c38ed4a931513809c32f0d, type: 3}
