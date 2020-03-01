@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class checkForWin : MonoBehaviour
 {
+    public bool isEndless;
+
     public Sprite star;
 
     public GameObject winScreen;
@@ -15,6 +17,8 @@ public class checkForWin : MonoBehaviour
     public GameObject p1, p2;
 
     public Button[] winScreenBtns;
+
+    public Text endlessScoreTxt;
 
     public void checkingWin()
     {
@@ -30,23 +34,40 @@ public class checkForWin : MonoBehaviour
 
     void setButtonNavs()
     {
-        Navigation nextNav = new Navigation();
-        nextNav.mode = Navigation.Mode.Explicit;
-        nextNav.selectOnLeft = winScreenBtns[2];
-        nextNav.selectOnRight = winScreenBtns[1];
-        winScreenBtns[0].navigation = nextNav;
+        if (!isEndless)
+        {
+            Navigation nextNav = new Navigation();
+            nextNav.mode = Navigation.Mode.Explicit;
+            nextNav.selectOnLeft = winScreenBtns[2];
+            nextNav.selectOnRight = winScreenBtns[1];
+            winScreenBtns[0].navigation = nextNav;
 
-        Navigation replayNav = new Navigation();
-        replayNav.mode = Navigation.Mode.Explicit;
-        replayNav.selectOnLeft = winScreenBtns[0];
-        replayNav.selectOnRight = winScreenBtns[2];
-        winScreenBtns[1].navigation = replayNav;
+            Navigation replayNav = new Navigation();
+            replayNav.mode = Navigation.Mode.Explicit;
+            replayNav.selectOnLeft = winScreenBtns[0];
+            replayNav.selectOnRight = winScreenBtns[2];
+            winScreenBtns[1].navigation = replayNav;
 
-        Navigation menuNav = new Navigation();
-        menuNav.mode = Navigation.Mode.Explicit;
-        menuNav.selectOnLeft = winScreenBtns[1];
-        menuNav.selectOnRight = winScreenBtns[0];
-        winScreenBtns[2].navigation = menuNav;
+            Navigation menuNav = new Navigation();
+            menuNav.mode = Navigation.Mode.Explicit;
+            menuNav.selectOnLeft = winScreenBtns[1];
+            menuNav.selectOnRight = winScreenBtns[0];
+            winScreenBtns[2].navigation = menuNav;
+        }
+        else
+        {
+            Navigation replayNav = new Navigation();
+            replayNav.mode = Navigation.Mode.Explicit;
+            replayNav.selectOnLeft = winScreenBtns[1];
+            replayNav.selectOnRight = winScreenBtns[1];
+            winScreenBtns[0].navigation = replayNav;
+
+            Navigation menuNav = new Navigation();
+            menuNav.mode = Navigation.Mode.Explicit;
+            menuNav.selectOnLeft = winScreenBtns[0];
+            menuNav.selectOnRight = winScreenBtns[0];
+            winScreenBtns[1].navigation = menuNav;
+        }
 
         GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(winScreenBtns[0].gameObject);
     }
@@ -66,37 +87,46 @@ public class checkForWin : MonoBehaviour
         SceneManagement.currInstance.returnToTitle();
     }
 
-    void enableWinScreen()
+    public void enableWinScreen()
     {
         winScreen.SetActive(true);
         setButtonNavs();
 
-        if (GetComponent<LevelStartup>().isFreePlay) scoreImg.SetActive(false);
-        else
+        if (!isEndless)
         {
-            // set score
-            scoreImg.SetActive(true);
-
-            int finalScore = p1.GetComponent<PlayerInteract>().showScore();
-            if (finalScore > 0)
+            if (GetComponent<LevelStartup>().isFreePlay) scoreImg.SetActive(false);
+            else
             {
-                scoreImg.transform.GetChild(0).GetComponent<Image>().sprite = star;
-                if (finalScore > 1)
+                // set score
+                scoreImg.SetActive(true);
+
+                int finalScore = p1.GetComponent<PlayerInteract>().showScore();
+                if (finalScore > 0)
                 {
-                    scoreImg.transform.GetChild(1).GetComponent<Image>().sprite = star;
-                    if (finalScore > 2)
+                    scoreImg.transform.GetChild(0).GetComponent<Image>().sprite = star;
+                    if (finalScore > 1)
                     {
-                        scoreImg.transform.GetChild(2).GetComponent<Image>().sprite = star;
+                        scoreImg.transform.GetChild(1).GetComponent<Image>().sprite = star;
+                        if (finalScore > 2)
+                        {
+                            scoreImg.transform.GetChild(2).GetComponent<Image>().sprite = star;
+                        }
                     }
                 }
+
+                int currLevel = SceneManager.GetActiveScene().buildIndex;
+                if (PlayerPrefs.GetInt("MaxLevel") < currLevel + 1) PlayerPrefs.SetInt("MaxLevel", currLevel + 1);
+
+                string playPref = "Level" + currLevel + "Score";
+                Debug.Log(playPref + ", " + finalScore);
+                if (finalScore > PlayerPrefs.GetInt(playPref)) PlayerPrefs.SetInt(playPref, finalScore);
             }
+        }
 
-            int currLevel = SceneManager.GetActiveScene().buildIndex;
-            if (PlayerPrefs.GetInt("MaxLevel") < currLevel + 1) PlayerPrefs.SetInt("MaxLevel", currLevel + 1);
-
-            string playPref = "Level" + currLevel + "Score";
-            Debug.Log(playPref + ", " + finalScore);
-            if (finalScore > PlayerPrefs.GetInt(playPref)) PlayerPrefs.SetInt(playPref, finalScore);
+        else
+        {
+            int score = Mathf.RoundToInt(GameObject.Find("EndlessManager").GetComponent<StartEndless>().totalTime);
+            endlessScoreTxt.text = "Final Score: " + score;
         }
     }
 }
