@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
 {
     public AudioClip[] songFiles;
     bool isNext = false;
+    AudioSource playMe;
     public static SoundManager instance;
     public AudioClip[] otherSounds;
     // Start is called before the first frame update
@@ -19,10 +20,10 @@ public class SoundManager : MonoBehaviour
         }
         else
             Destroy(this);
-
+        playMe = GetComponent<AudioSource>();
         StartCoroutine(PlaySong());
     }
-    void playAtLocSound(float x, float y, string sound)
+    public void playAtLocSound(float x, float y, string sound)
     {
         GameObject tmp = new GameObject();
         tmp.AddComponent<AudioSource>();
@@ -49,7 +50,8 @@ public class SoundManager : MonoBehaviour
     {
         if (i == -1)
             i = Random.Range(0, songFiles.Length);
-        
+        playMe.clip = songFiles[i];
+        playMe.Play();
         yield return new WaitForSeconds(songFiles[i].length);
         if(isNext)
             i = (i + 1)%songFiles.Length;
