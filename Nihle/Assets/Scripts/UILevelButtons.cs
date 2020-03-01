@@ -14,6 +14,12 @@ public class UILevelButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(PlayerPrefs.GetInt("MaxLevel") == 0)
+        {
+            Debug.Log("tis 0");
+            PlayerPrefs.SetInt("MaxLevel", 1);
+        }
+
         setNavigations();
 
         eventSystem = GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>();
