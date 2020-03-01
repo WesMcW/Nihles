@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
         movement = new Vector2(horizontalMovement, verticalMovement);
 
         anim.SetFloat("Speed", Mathf.Abs(horizontalMovement));
+        anim.SetFloat("VertSpeed", rb.velocity.y);
+        anim.SetBool("onGround", isGrounded);
     }
 
     void FixedUpdate()

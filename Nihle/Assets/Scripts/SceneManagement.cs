@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class SceneManagement : MonoBehaviour
 {
     public static SceneManagement currInstance;
-    Scene currentScene;
+    public Scene currentScene;
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
