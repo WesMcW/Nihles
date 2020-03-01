@@ -11,7 +11,7 @@ public class SceneManagement : MonoBehaviour
     public bool isPaused = false;
     public GameObject pauseMenuUI;
 
-    Scene currentScene;
+    public Scene currentScene;
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
