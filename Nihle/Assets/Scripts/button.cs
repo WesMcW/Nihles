@@ -5,6 +5,7 @@ using mover;
 
 public class button : MonoBehaviour
 {
+
     public LayerMask pushBlocky;
     public GameObject platform;
     public Animator animator;
@@ -12,6 +13,7 @@ public class button : MonoBehaviour
     public bool isPlatformButton;
     public bool isWorldChangeButton;
     public bool isDisappearing = false;
+    bool playSoundOnce = false;
 
     public Component[] myChildren;
     private void Awake() {
@@ -41,6 +43,8 @@ public class button : MonoBehaviour
         if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0 ){
             animator.SetBool("isPressed", false);
             collision.gameObject.transform.parent = null;
+            playSoundOnce = false;
+            SoundManager.instance.platDissapear();
             if (isDisappearing && isPlatformButton)
             {
                 print("Disappear");
@@ -57,8 +61,13 @@ public class button : MonoBehaviour
     //Enables a platform and updates the sprite and collider
     private void enablePlatform()
     {
-        platform.GetComponent<BoxCollider2D>().enabled = true;
-        platform.GetComponent<SpriteRenderer>().sprite = active;
+        if (!playSoundOnce)
+        {
+            platform.GetComponent<BoxCollider2D>().enabled = true;
+            platform.GetComponent<SpriteRenderer>().sprite = active;
+            SoundManager.instance.platAppear();
+            playSoundOnce = true;
+        }
     }
 
     //Disables a platform and updates the sprite and collider
@@ -66,7 +75,6 @@ public class button : MonoBehaviour
     {
         if (isPlatformButton == true)
         {
-
             platform.GetComponent<BoxCollider2D>().enabled = false;
             platform.GetComponent<SpriteRenderer>().sprite = inactive;
         }

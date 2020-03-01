@@ -10,6 +10,11 @@ public class SoundManager : MonoBehaviour
     AudioSource playMe;
     public static SoundManager instance;
     public AudioClip[] otherSounds;
+
+    public AudioSource appear;
+    public AudioSource disappear;
+    public AudioSource collect;
+    public AudioSource door;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +24,7 @@ public class SoundManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
         else
-            Destroy(this);
+            Destroy(this.gameObject);
         playMe = GetComponent<AudioSource>();
         StartCoroutine(PlaySong());
     }
@@ -48,14 +53,37 @@ public class SoundManager : MonoBehaviour
 
     private IEnumerator PlaySong(int i = -1)
     {
-        if (i == -1)
-            i = Random.Range(0, songFiles.Length);
-        playMe.clip = songFiles[i];
-        playMe.Play();
-        yield return new WaitForSeconds(songFiles[i].length);
-        if(isNext)
-            i = (i + 1)%songFiles.Length;
-        else
-            i = Random.Range(0, songFiles.Length);
+        while (true)
+        {
+            if (i == -1)
+                i = Random.Range(0, songFiles.Length);
+            playMe.clip = songFiles[i];
+            playMe.Play();
+            yield return new WaitForSeconds(songFiles[i].length);
+            if (isNext)
+                i = (i + 1) % songFiles.Length;
+            else
+                i = Random.Range(0, songFiles.Length);
+        }
+    }
+
+    public void platAppear()
+    {
+        appear.Play();
+    }
+
+    public void platDissapear()
+    {
+        disappear.Play();
+    }
+
+    public void collectSound()
+    {
+        collect.Play();
+    }
+
+    public void playDoor()
+    {
+        door.Play();
     }
 }
