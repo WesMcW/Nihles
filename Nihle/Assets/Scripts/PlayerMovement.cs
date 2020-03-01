@@ -96,14 +96,14 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag ("Ground") || collision.CompareTag("PushBlock")) 
-            isGrounded = true;
+            if(rb.velocity.y <= 0) isGrounded = true;
     }
     
     void OnTriggerStay2D(Collider2D collision)
     {
         //if player repeatedly presses jump they can remain unable to jump so this method is needed
         if (collision.CompareTag("Ground") || collision.CompareTag("PushBlock"))
-            isGrounded = true;
+            if (rb.velocity.y <= 0) isGrounded = true;
     }
 
     public void disableThings()
