@@ -79,13 +79,13 @@ public class UILevelButtons : MonoBehaviour
                 }
 
                 if (i - 1 < 0 && LevelButtons[14].interactable) navs[i].selectOnLeft = LevelButtons[14];
-                else if (i - 1 < 0 && !LevelButtons[14].interactable) navs[i].selectOnLeft = LevelButtons[PlayerPrefs.GetInt("MaxLevel")];
+                else if (i - 1 < 0 && !LevelButtons[14].interactable) navs[i].selectOnLeft = LevelButtons[PlayerPrefs.GetInt("MaxLevel") - 1];
                 else
                 {
                     navs[i].selectOnLeft = LevelButtons[i - 1];
                 }
 
-                if (i + 1 > 14 || PlayerPrefs.GetInt("MaxLevel") < i + 1) navs[i].selectOnRight = LevelButtons[0];
+                if (i + 1 > 14 || PlayerPrefs.GetInt("MaxLevel") - 1 < i + 1) navs[i].selectOnRight = LevelButtons[0];
                 else
                 {
                     navs[i].selectOnRight = LevelButtons[i + 1];
@@ -116,7 +116,7 @@ public class UILevelButtons : MonoBehaviour
         }
 
         // shows collectables found in each level
-        for (int i = 1; i <= PlayerPrefs.GetInt("MaxLevel"); i++)
+        for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel"); i++)
         {
             LevelButtons[i].interactable = true;
 
