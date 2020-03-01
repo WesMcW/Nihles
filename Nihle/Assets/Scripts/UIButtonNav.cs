@@ -30,6 +30,8 @@ public class UIButtonNav : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetInt("MaxLevel") <= 0) PlayerPrefs.SetInt("MaxLevel", 1);
+
         setNavigations();
 
         titleScreen.SetActive(true);
