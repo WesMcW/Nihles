@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorMovement : MonoBehaviour
 {
     public bool doorInUse = false;
-
+    public bool stayOnSide;
     public GameObject otherDoor;
     Animator myAnim, otherAnim;
 
@@ -31,9 +31,10 @@ public class DoorMovement : MonoBehaviour
         if (usedDoor != null)
         {
             usedDoor.transform.position = otherDoor.transform.position;
-            if (usedDoor.layer == LayerMask.NameToLayer("Right")) usedDoor.layer = LayerMask.NameToLayer("Left");
-            else usedDoor.layer = LayerMask.NameToLayer("Right");
-
+            if (!stayOnSide) {
+                if (usedDoor.layer == LayerMask.NameToLayer("Right")) usedDoor.layer = LayerMask.NameToLayer("Left");
+                else usedDoor.layer = LayerMask.NameToLayer("Right");
+            }
             // other things that might be needed in swap
         }
 
