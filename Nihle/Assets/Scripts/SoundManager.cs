@@ -23,7 +23,7 @@ public class SoundManager : MonoBehaviour
         playMe = GetComponent<AudioSource>();
         StartCoroutine(PlaySong());
     }
-    void playAtLocSound(float x, float y, string sound)
+    public void playAtLocSound(float x, float y, string sound)
     {
         GameObject tmp = new GameObject();
         tmp.AddComponent<AudioSource>();
