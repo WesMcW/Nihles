@@ -59,6 +59,6 @@ public class UILevelButtons : MonoBehaviour
 
     public void updateCollectables()
     {
-
+        // shows collectables found in each level
     }
 }
