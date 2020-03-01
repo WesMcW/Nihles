@@ -45,6 +45,13 @@ public class checkForWin : MonoBehaviour
                         }
                     }
                 }
+
+                int currLevel = SceneManagement.currInstance.currentScene.buildIndex;
+                if (PlayerPrefs.GetInt("MaxLevel") < currLevel) PlayerPrefs.SetInt("MaxLevel", currLevel);
+
+                string playPref = "Level" + currLevel + "Score";
+                Debug.Log(playPref + ", " + finalScore);
+                if (finalScore > PlayerPrefs.GetInt(playPref)) PlayerPrefs.SetInt(playPref, finalScore);
             }
         }
     }
