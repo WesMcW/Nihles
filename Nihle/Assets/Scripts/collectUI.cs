@@ -14,6 +14,10 @@ public class collectUI : MonoBehaviour
     public GameObject playerOne;
     public GameObject playerTwo;
 
+    private void Awake() {
+        playerOne = GameObject.FindGameObjectWithTag("Player1");
+        playerTwo = GameObject.FindGameObjectWithTag("Player2");
+    }
 
     private void Update() {
         if (playerOne.GetComponent<PlayerInteract>().sadCollect == 1) {

@@ -2686,6 +2686,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4583162569804727154, guid: 6014b9a560713a4458dd61e1e7a660f3,
+        type: 3}
+      propertyPath: playerOne
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583162569804727154, guid: 6014b9a560713a4458dd61e1e7a660f3,
+        type: 3}
+      propertyPath: playerTwo
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8936314977149525031, guid: 6014b9a560713a4458dd61e1e7a660f3,
         type: 3}
       propertyPath: m_AnchorMin.y
