@@ -2289,7 +2289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f1084390664a1469a16ade1e8b0e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFreePlay: 0
+  isFreePlay: 1
   collectables: {fileID: 0}
 --- !u!114 &5769939568772880031
 MonoBehaviour:
