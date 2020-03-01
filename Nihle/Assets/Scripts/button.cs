@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using mover;
+
 public class button : MonoBehaviour
 {
     public LayerMask pushBlocky;
@@ -12,6 +13,7 @@ public class button : MonoBehaviour
     public bool isWorldChangeButton;
     public bool isDisappearing = false;
 
+    public Component[] myChildren;
     private void Awake() {
         animator = GetComponent<Animator>();
     }
@@ -25,6 +27,8 @@ public class button : MonoBehaviour
             }
             if(isDisappearing && isPlatformButton)
             {
+               // collision.gameObject.transform.parent = null;
+                Unparent();
                 platform.SetActive(false);
             }
             if(isWorldChangeButton == true) {
@@ -62,9 +66,19 @@ public class button : MonoBehaviour
     {
         if (isPlatformButton == true)
         {
+
             platform.GetComponent<BoxCollider2D>().enabled = false;
             platform.GetComponent<SpriteRenderer>().sprite = inactive;
         }
 
+    }
+
+    void Unparent() {
+        myChildren = platform.GetComponentsInChildren<Component>();
+        for(int i = 0; i < myChildren.Length; i++) {
+            if(myChildren[i].CompareTag("Player1") || myChildren[i].CompareTag("Player2")) {
+                myChildren[i].transform.parent = null;
+            }
+        }
     }
 }
