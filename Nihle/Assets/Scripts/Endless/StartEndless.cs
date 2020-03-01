@@ -8,6 +8,8 @@ public class StartEndless : MonoBehaviour
     public bool running;
     float timeMove = 0;
 
+    public float totalTime = 0;
+
     public GameObject movingCamera;
 
     // Start is called before the first frame update
@@ -23,6 +25,8 @@ public class StartEndless : MonoBehaviour
         {
             timeMove += (Time.deltaTime / 2);
             movingCamera.transform.position = new Vector3(0, timeMove, -10);
+
+            totalTime += Time.deltaTime;
         }
     }
 
@@ -30,5 +34,6 @@ public class StartEndless : MonoBehaviour
     {
         running = true;
         GetComponent<GenerateWalls>().startInvoke();
+        GetComponent<GeneratePlatforms>().startInvoke();
     }
 }
