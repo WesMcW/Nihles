@@ -164,7 +164,7 @@ TextureImporter:
       name: sadPlayerJump_2
       rect:
         serializedVersion: 2
-        x: 66
+        x: 64
         y: 68
         width: 31
         height: 32
