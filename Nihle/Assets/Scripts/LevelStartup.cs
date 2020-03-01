@@ -16,6 +16,7 @@ public class LevelStartup : MonoBehaviour
         {
             isFreePlay = true;
             collectables.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
         }
     }
 }

@@ -143,8 +143,8 @@ public class UIButtonNav : MonoBehaviour
     public void hasCollectables(bool hasCollectables)
     {
         // play the level, with/without collectables
-        if (hasCollectables) PlayerPrefs.SetString("Collectables", "false");
-        else PlayerPrefs.SetString("Collectables", "true");
+        if (hasCollectables) PlayerPrefs.SetString("Collectables", "true");
+        else PlayerPrefs.SetString("Collectables", "false");
     }
 
     public void playLevel(int level)

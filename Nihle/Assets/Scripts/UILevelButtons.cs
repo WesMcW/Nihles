@@ -14,6 +14,12 @@ public class UILevelButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(PlayerPrefs.GetInt("MaxLevel") == 0)
+        {
+            Debug.Log("tis 0");
+            PlayerPrefs.SetInt("MaxLevel", 1);
+        }
+
         setNavigations();
 
         eventSystem = GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>();
@@ -73,13 +79,13 @@ public class UILevelButtons : MonoBehaviour
                 }
 
                 if (i - 1 < 0 && LevelButtons[14].interactable) navs[i].selectOnLeft = LevelButtons[14];
-                else if (i - 1 < 0 && !LevelButtons[14].interactable) navs[i].selectOnLeft = LevelButtons[PlayerPrefs.GetInt("MaxLevel") - 1];
+                else if (i - 1 < 0 && !LevelButtons[14].interactable) navs[i].selectOnLeft = LevelButtons[PlayerPrefs.GetInt("MaxLevel")];
                 else
                 {
                     navs[i].selectOnLeft = LevelButtons[i - 1];
                 }
 
-                if (i + 1 > 14 || !LevelButtons[i + 1].interactable) navs[i].selectOnRight = LevelButtons[0];
+                if (i + 1 > 14 || PlayerPrefs.GetInt("MaxLevel") < i + 1) navs[i].selectOnRight = LevelButtons[0];
                 else
                 {
                     navs[i].selectOnRight = LevelButtons[i + 1];
@@ -100,10 +106,31 @@ public class UILevelButtons : MonoBehaviour
     {
         LevelButtons[0].interactable = true;
 
+        if(PlayerPrefs.GetInt("Level1Score") > 0)
+        {
+            for (int j = 0; j < PlayerPrefs.GetInt("Level1Score"); j++)
+            {
+                LevelButtons[0].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
+                Debug.Log("Add Star for Level " + j);
+            }
+        }
+
         // shows collectables found in each level
-        for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel"); i++)
+        for (int i = 1; i <= PlayerPrefs.GetInt("MaxLevel"); i++)
         {
             LevelButtons[i].interactable = true;
+
+            string playPref = "Level" + (i + 1) + "Score";
+            Debug.Log("Finding Score of Level: " + playPref);
+
+            if(PlayerPrefs.GetInt(playPref) > 0)
+            {
+                for(int j = 0; j < PlayerPrefs.GetInt(playPref); j++)
+                {
+                    LevelButtons[i].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
+                    Debug.Log("Add Star for Level " + j);
+                }
+            }
         }
     }
 }

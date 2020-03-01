@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class checkForWin : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class checkForWin : MonoBehaviour
                     }
                 }
 
-                int currLevel = SceneManagement.currInstance.currentScene.buildIndex;
+                int currLevel = SceneManager.GetActiveScene().buildIndex;
                 if (PlayerPrefs.GetInt("MaxLevel") < currLevel) PlayerPrefs.SetInt("MaxLevel", currLevel);
 
                 string playPref = "Level" + currLevel + "Score";
