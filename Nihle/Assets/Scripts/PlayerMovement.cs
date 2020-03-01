@@ -30,11 +30,14 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(Input.GetJoystickNames()[0]);
+        //Debug.Log(Input.GetJoystickNames()[0]);
         //gets horizontal movement from controller
-        if (Input.GetJoystickNames()[0].Length == 33 || Input.GetJoystickNames()[0].Length == 19 || Input.GetJoystickNames()[0].Length == 25) horizontalMovement = Input.GetAxisRaw("MoveHorizontalOne");
+        if (Input.GetJoystickNames().Length > 0)
+        {
+            if (Input.GetJoystickNames()[0].Length == 33 || Input.GetJoystickNames()[0].Length == 19 || Input.GetJoystickNames()[0].Length == 25) horizontalMovement = Input.GetAxisRaw("MoveHorizontalOne");
+            else horizontalMovement = Input.GetAxisRaw("PlayerOneKeyMove");
+        }
         else horizontalMovement = Input.GetAxisRaw("PlayerOneKeyMove");
-
         movement = new Vector2(horizontalMovement, verticalMovement);
 
         anim.SetFloat("Speed", Mathf.Abs(horizontalMovement));
