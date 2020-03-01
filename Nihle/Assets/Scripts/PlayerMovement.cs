@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     float horizontalMovement = 0f;
     float verticalMovement = 0f;
     public bool isGrounded;
@@ -32,7 +31,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //gets horizontal movement from controller
-        horizontalMovement = Input.GetAxisRaw("MoveHorizontalOne");
+        if (Input.GetJoystickNames()[0].Length == 33 || Input.GetJoystickNames()[0].Length == 19) horizontalMovement = Input.GetAxisRaw("MoveHorizontalOne");
+        else horizontalMovement = Input.GetAxisRaw("PlayerOneKeyMove");
 
         movement = new Vector2(horizontalMovement, verticalMovement);
 
