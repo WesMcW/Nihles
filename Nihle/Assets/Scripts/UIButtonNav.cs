@@ -14,6 +14,7 @@ public class UIButtonNav : MonoBehaviour
     [Header("Play Buttons")]
     public Button challengeBtn;
     public Button freePlayBtn;
+    public Button endlessBtn;
     public Button backBtn;
 
     [Header("Panels and More")]
@@ -41,6 +42,18 @@ public class UIButtonNav : MonoBehaviour
         playScreen.SetActive(false);
         challengeScreen.SetActive(false);
         freePlayScreen.SetActive(false);
+
+            PlayerPrefs.SetInt("MaxLevel", 16);
+            for (int i = 1; i < 15; i++)
+            {
+                string level = "Level" + i + "Score";
+                PlayerPrefs.SetInt(level, 3);
+            }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.F)) playEndless();
     }
 
     void setNavigations()
@@ -63,24 +76,54 @@ public class UIButtonNav : MonoBehaviour
         exitNav.selectOnUp = howToBtn;
         exitBtn.navigation = exitNav;
 
+        if (PlayerPrefs.GetInt("Progress") != 100)
+        {
+            Navigation chalNav = new Navigation();
+            chalNav.mode = Navigation.Mode.Explicit;
+            chalNav.selectOnDown = freePlayBtn;
+            chalNav.selectOnUp = backBtn;
+            challengeBtn.navigation = chalNav;
 
-        Navigation chalNav = new Navigation();
-        chalNav.mode = Navigation.Mode.Explicit;
-        chalNav.selectOnDown = freePlayBtn;
-        chalNav.selectOnUp = backBtn;
-        challengeBtn.navigation = chalNav;
+            Navigation freeNav = new Navigation();
+            freeNav.mode = Navigation.Mode.Explicit;
+            freeNav.selectOnDown = backBtn;
+            freeNav.selectOnUp = challengeBtn;
+            freePlayBtn.navigation = freeNav;
 
-        Navigation freeNav = new Navigation();
-        freeNav.mode = Navigation.Mode.Explicit;
-        freeNav.selectOnDown = backBtn;
-        freeNav.selectOnUp = challengeBtn;
-        freePlayBtn.navigation = freeNav;
+            Navigation backNav = new Navigation();
+            backNav.mode = Navigation.Mode.Explicit;
+            backNav.selectOnDown = challengeBtn;
+            backNav.selectOnUp = freePlayBtn;
+            backBtn.navigation = backNav;
+        }
+        else
+        {
+            endlessBtn.interactable = true;
 
-        Navigation backNav = new Navigation();
-        backNav.mode = Navigation.Mode.Explicit;
-        backNav.selectOnDown = challengeBtn;
-        backNav.selectOnUp = freePlayBtn;
-        backBtn.navigation = backNav;
+            Navigation chalNav = new Navigation();
+            chalNav.mode = Navigation.Mode.Explicit;
+            chalNav.selectOnDown = freePlayBtn;
+            chalNav.selectOnUp = backBtn;
+            challengeBtn.navigation = chalNav;
+
+            Navigation freeNav = new Navigation();
+            freeNav.mode = Navigation.Mode.Explicit;
+            freeNav.selectOnDown = endlessBtn;
+            freeNav.selectOnUp = challengeBtn;
+            freePlayBtn.navigation = freeNav;
+
+            Navigation endlessNav = new Navigation();
+            endlessNav.mode = Navigation.Mode.Explicit;
+            endlessNav.selectOnDown = backBtn;
+            endlessNav.selectOnUp = freePlayBtn;
+            endlessBtn.navigation = endlessNav;
+
+            Navigation backNav = new Navigation();
+            backNav.mode = Navigation.Mode.Explicit;
+            backNav.selectOnDown = challengeBtn;
+            backNav.selectOnUp = endlessBtn;
+            backBtn.navigation = backNav;
+        }
     }
 
     //button methods
@@ -151,5 +194,10 @@ public class UIButtonNav : MonoBehaviour
     {
         //load level
         SceneManager.LoadScene(level);
+    }
+
+    public void playEndless()
+    {
+        SceneManager.LoadScene(16);
     }
 }

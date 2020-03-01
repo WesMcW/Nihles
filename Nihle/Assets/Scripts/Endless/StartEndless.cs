@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartEndless : MonoBehaviour
 {
     public float startTime;
     public bool running;
     float timeMove = 0;
+
+    public Text scoreTxt;
 
     public float totalTime = 0;
 
@@ -27,6 +30,7 @@ public class StartEndless : MonoBehaviour
             movingCamera.transform.position = new Vector3(0, timeMove, -10);
 
             totalTime += Time.deltaTime;
+            scoreTxt.text = Mathf.RoundToInt(totalTime).ToString();
         }
     }
 
