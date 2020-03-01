@@ -8,7 +8,10 @@ using UnityEngine.UI;
 public class SceneManagement : MonoBehaviour
 {
     public static SceneManagement currInstance;
-    public Scene currentScene;
+    public bool isPaused = false;
+    public GameObject pauseMenuUI;
+
+    Scene currentScene;
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
@@ -25,9 +28,19 @@ public class SceneManagement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Cancel"))
+        if (Input.GetButtonUp("Cancel") || Input.GetButtonUp("PlayerOnePause") || Input.GetButtonUp("PlayerTwoPause"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (isPaused)
+            {
+                isPaused = false;
+                Resume();
+            }
+            else
+            {
+                isPaused = true;
+                PauseGame();
+            }
         }   
     }
 
@@ -70,4 +83,17 @@ public class SceneManagement : MonoBehaviour
     {
         SceneManager.LoadScene(currentScene.buildIndex + 1);
     }
+
+    public void Resume()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void PauseGame()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+       
 }
