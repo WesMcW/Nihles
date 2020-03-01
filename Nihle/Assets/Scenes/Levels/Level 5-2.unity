@@ -10931,6 +10931,11 @@ PrefabInstance:
       propertyPath: collectables
       value: 
       objectReference: {fileID: 1074750172}
+    - target: {fileID: 8936314978323678656, guid: 6014b9a560713a4458dd61e1e7a660f3,
+        type: 3}
+      propertyPath: isFreePlay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8936314978323678658, guid: 6014b9a560713a4458dd61e1e7a660f3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11076,6 +11081,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d4e6195eff08d284a88bcbd24a7ee112,
         type: 3}
+    - target: {fileID: 1371953120885340562, guid: 72338ba4ee148b445836b7ba97d8e121,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1371953120885340563, guid: 72338ba4ee148b445836b7ba97d8e121,
         type: 3}
       propertyPath: m_LocalPosition.x
