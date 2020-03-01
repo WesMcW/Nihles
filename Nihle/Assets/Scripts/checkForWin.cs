@@ -48,7 +48,7 @@ public class checkForWin : MonoBehaviour
                 }
 
                 int currLevel = SceneManager.GetActiveScene().buildIndex;
-                if (PlayerPrefs.GetInt("MaxLevel") < currLevel) PlayerPrefs.SetInt("MaxLevel", currLevel);
+                if (PlayerPrefs.GetInt("MaxLevel") < currLevel + 1) PlayerPrefs.SetInt("MaxLevel", currLevel + 1);
 
                 string playPref = "Level" + currLevel + "Score";
                 Debug.Log(playPref + ", " + finalScore);
