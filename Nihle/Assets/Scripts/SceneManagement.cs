@@ -68,7 +68,7 @@ public class SceneManagement : MonoBehaviour
 
     public void nextLevel()
     {
+        currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex + 1);
-    }
-       
+    }       
 }
