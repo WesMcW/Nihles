@@ -2221,6 +2221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   pauseScreen: {fileID: 1320646803677909087}
+  pauseScreenBtns:
+  - {fileID: 3347982459815992570}
+  - {fileID: 5661283584580614927}
 --- !u!1 &8936314978397913287
 GameObject:
   m_ObjectHideFlags: 0
