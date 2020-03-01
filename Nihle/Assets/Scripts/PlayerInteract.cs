@@ -48,6 +48,7 @@ public class PlayerInteract : MonoBehaviour
         if(collision.gameObject.CompareTag("sadCollect") && playerNum == 1 && !collected)
         {
             sadCollect++;
+            SoundManager.instance.collectSound();
             totalIncrease();
             Destroy(collision.gameObject);
             collected = true;
@@ -55,6 +56,7 @@ public class PlayerInteract : MonoBehaviour
         if(collision.gameObject.CompareTag("hapCollect") && playerNum == 2 && !collected)
         {
             hapCollect++;
+            SoundManager.instance.collectSound();
             totalIncrease();
             Destroy(collision.gameObject);
             collected = true;

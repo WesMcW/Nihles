@@ -11,6 +11,9 @@ public class UILevelButtons : MonoBehaviour
     public Button[] LevelButtons;
     public Button backBtn;
 
+    public int totalCompletion;
+    public Text amount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -129,8 +132,13 @@ public class UILevelButtons : MonoBehaviour
                 {
                     LevelButtons[i].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
                     Debug.Log("Add Star for Level " + j);
+                    totalCompletion++;
                 }
             }
         }
+        //set bar
+        int total = Mathf.RoundToInt((totalCompletion / 45f) * 100);
+        Debug.Log(totalCompletion + " " + total);
+        amount.text = total + "%";
     }
 }
