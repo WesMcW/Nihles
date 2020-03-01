@@ -657,6 +657,18 @@ PrefabInstance:
       propertyPath: platform
       value: 
       objectReference: {fileID: 463086751}
+    - target: {fileID: 1803503425186196285, guid: 4c3dd60066b47d840a6f6d5efe347a03,
+        type: 3}
+      propertyPath: active
+      value: 
+      objectReference: {fileID: 1755180825014867481, guid: fd7aa8b8f1e764f25a1f209fdc5e5068,
+        type: 3}
+    - target: {fileID: 1803503425186196285, guid: 4c3dd60066b47d840a6f6d5efe347a03,
+        type: 3}
+      propertyPath: inactive
+      value: 
+      objectReference: {fileID: 1159009944594094006, guid: fd7aa8b8f1e764f25a1f209fdc5e5068,
+        type: 3}
     - target: {fileID: 6255175653174495464, guid: 4c3dd60066b47d840a6f6d5efe347a03,
         type: 3}
       propertyPath: m_Name
@@ -763,6 +775,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sad Door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2828724015033073898, guid: 211cbcda3f3b251499c17d645102cbd6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4689337502761445711, guid: 0651e768c8fd84741843e39e4dc1e853,
+        type: 3}
     - target: {fileID: 2828724015033073899, guid: 211cbcda3f3b251499c17d645102cbd6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -818,6 +836,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8558718943703176954, guid: 211cbcda3f3b251499c17d645102cbd6,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 54fe3f1c1b3670c48a3124b64e94e38c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 211cbcda3f3b251499c17d645102cbd6, type: 3}
 --- !u!1 &440229838 stripped
@@ -1909,6 +1932,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1177947420576066433, guid: 8c12680e915282e49ab7c39eb377007e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -168750109683359296, guid: af22472c9551949cd9d3480fa5360891,
+        type: 3}
     - target: {fileID: 1177947420576066446, guid: 8c12680e915282e49ab7c39eb377007e,
         type: 3}
       propertyPath: m_Name
@@ -1919,6 +1948,11 @@ PrefabInstance:
       propertyPath: otherDoor
       value: 
       objectReference: {fileID: 515688061}
+    - target: {fileID: 4746759895544135057, guid: 8c12680e915282e49ab7c39eb377007e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1858f260a4cfd614b8c6f85893a0f311, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c12680e915282e49ab7c39eb377007e, type: 3}
 --- !u!1001 &1741441740
