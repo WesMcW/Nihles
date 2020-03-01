@@ -33,7 +33,7 @@ public class DoorMovement : MonoBehaviour
             usedDoor.transform.position = otherDoor.transform.position;
             if (usedDoor.layer == LayerMask.NameToLayer("Right")) usedDoor.layer = LayerMask.NameToLayer("Left");
             else usedDoor.layer = LayerMask.NameToLayer("Right");
-
+            SoundManager.instance.playDoor();
             // other things that might be needed in swap
         }
 

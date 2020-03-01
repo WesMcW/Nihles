@@ -10,6 +10,11 @@ public class SoundManager : MonoBehaviour
     AudioSource playMe;
     public static SoundManager instance;
     public AudioClip[] otherSounds;
+
+    public AudioSource appear;
+    public AudioSource disappear;
+    public AudioSource collect;
+    public AudioSource door;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,5 +62,25 @@ public class SoundManager : MonoBehaviour
             i = (i + 1)%songFiles.Length;
         else
             i = Random.Range(0, songFiles.Length);
+    }
+
+    public void platAppear()
+    {
+        appear.Play();
+    }
+
+    public void platDissapear()
+    {
+        disappear.Play();
+    }
+
+    public void collectSound()
+    {
+        collect.Play();
+    }
+
+    public void playDoor()
+    {
+        door.Play();
     }
 }
