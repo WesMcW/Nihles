@@ -30,6 +30,7 @@ public class DoorMovement : MonoBehaviour
     {
         if (usedDoor != null)
         {
+            SoundManager.instance.playDoor();
             usedDoor.transform.position = otherDoor.transform.position;
             if (!stayOnSide) {
                 if (usedDoor.layer == LayerMask.NameToLayer("Right")) usedDoor.layer = LayerMask.NameToLayer("Left");
