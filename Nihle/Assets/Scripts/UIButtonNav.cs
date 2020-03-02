@@ -47,6 +47,7 @@ public class UIButtonNav : MonoBehaviour
     private void Update()
     {
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.F)) playEndless();
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Escape)) resetAllPlayerPrefs();
     }
 
     void setNavigations()
@@ -173,6 +174,7 @@ public class UIButtonNav : MonoBehaviour
         {
             challengeScreen.SetActive(false);
             challengeScreen.GetComponent<UILevelButtons>().totalCompletion = 0;
+            challengeScreen.GetComponent<UILevelButtons>().resetStars();
         }
         if (freePlayScreen.activeInHierarchy) freePlayScreen.SetActive(false);
 
@@ -196,5 +198,11 @@ public class UIButtonNav : MonoBehaviour
     public void playEndless()
     {
         SceneManager.LoadScene(16);
+    }
+
+    public void resetAllPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(0);
     }
 }

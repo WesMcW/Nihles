@@ -14,6 +14,8 @@ public class UILevelButtons : MonoBehaviour
     public int totalCompletion;
     public Text amount;
 
+    List<GameObject> stars;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class UILevelButtons : MonoBehaviour
         setNavigations();
 
         eventSystem = GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>();
+        stars = new List<GameObject>();
     }
 
     void setNavigations()
@@ -121,7 +124,7 @@ public class UILevelButtons : MonoBehaviour
         }
 
         // shows collectables found in each level
-        for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel") - 1; i++)
+        for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel"); i++)
         {
             LevelButtons[i].interactable = true;
 
@@ -133,6 +136,7 @@ public class UILevelButtons : MonoBehaviour
                 for(int j = 0; j < PlayerPrefs.GetInt(playPref); j++)
                 {
                     LevelButtons[i].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
+                    stars.Add(LevelButtons[i].transform.GetChild(1).GetChild(j).gameObject);
                     Debug.Log("Add Star for Level " + j);
                     totalCompletion++;
                 }
@@ -142,5 +146,14 @@ public class UILevelButtons : MonoBehaviour
         int total = Mathf.RoundToInt((totalCompletion / 45f) * 100);
         Debug.Log(totalCompletion + " " + total);
         amount.text = total + "%";
+    }
+
+    public void resetStars()
+    {
+        foreach(GameObject s in stars)
+        {
+            s.SetActive(false);
+            stars.Remove(s);
+        }
     }
 }
