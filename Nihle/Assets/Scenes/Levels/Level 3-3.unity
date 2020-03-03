@@ -227,6 +227,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 291262800327006222, guid: 4f021ae0a4662304790d6535fa293a34,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f021ae0a4662304790d6535fa293a34, type: 3}
 --- !u!4 &4221103 stripped
@@ -439,6 +444,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 291262800327006222, guid: 4f021ae0a4662304790d6535fa293a34,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
     - target: {fileID: 291262800327006223, guid: 4f021ae0a4662304790d6535fa293a34,
         type: 3}
       propertyPath: m_Sprite
@@ -1103,6 +1113,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sadPlatformsRegular
       objectReference: {fileID: 0}
+    - target: {fileID: 6280459651698678569, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f3768461c94aa43a9103c51142e434, type: 3}
 --- !u!1 &332757173 stripped
@@ -1501,6 +1516,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 291262800327006222, guid: 4f021ae0a4662304790d6535fa293a34,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
     - target: {fileID: 291262800327006223, guid: 4f021ae0a4662304790d6535fa293a34,
         type: 3}
       propertyPath: m_Sprite
@@ -2412,6 +2432,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 291262800327006222, guid: 4f021ae0a4662304790d6535fa293a34,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
     - target: {fileID: 291262800327006223, guid: 4f021ae0a4662304790d6535fa293a34,
         type: 3}
       propertyPath: m_Sprite
@@ -3026,6 +3051,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 291262800327006222, guid: 4f021ae0a4662304790d6535fa293a34,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
     - target: {fileID: 291262800327006223, guid: 4f021ae0a4662304790d6535fa293a34,
         type: 3}
       propertyPath: m_Sprite
@@ -6278,7 +6308,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 7702917970993336253}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7068,6 +7098,7 @@ GameObject:
   - component: {fileID: 7702917972175973159}
   - component: {fileID: 7702917972175973156}
   - component: {fileID: 7702917972175973157}
+  - component: {fileID: 7702917972175973148}
   m_Layer: 11
   m_Name: Happy Ground
   m_TagString: Ground
@@ -7089,6 +7120,32 @@ Transform:
   m_Father: {fileID: 7702917970831348524}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7702917972175973148
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7702917972175973146}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 7.96976, y: -2.0632076}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9350266, y: 5.1989517}
+  m_EdgeRadius: 0
 --- !u!50 &7702917972175973156
 Rigidbody2D:
   serializedVersion: 4
@@ -7119,7 +7176,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 7702917972175973146}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: dd6da032dce86e24fa786c7444329031, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
