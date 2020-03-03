@@ -22,7 +22,7 @@ public class GeneratePlatforms : MonoBehaviour
 
     public void startInvoke()
     {
-        InvokeRepeating("startPlatforms", 2.5F, 8.5F);
+        InvokeRepeating("startPlatforms", 5F, 6.5F);
     }
 
     public void startPlatforms()
