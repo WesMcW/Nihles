@@ -11157,6 +11157,7 @@ GameObject:
   - component: {fileID: 882655314}
   - component: {fileID: 882655313}
   - component: {fileID: 882655312}
+  - component: {fileID: 882655315}
   m_Layer: 5
   m_Name: THEFILTER
   m_TagString: Untagged
@@ -11239,6 +11240,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882655310}
   m_CullTransparentMesh: 0
+--- !u!114 &882655315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882655310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7c48e662b519a4fa31501ecd03efd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &887977765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6124607198878978433, guid: 0f06a911acea34748956817293987ef9,

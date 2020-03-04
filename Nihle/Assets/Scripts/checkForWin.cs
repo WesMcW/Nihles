@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class checkForWin : MonoBehaviour
 {
     public bool isEndless;
+    public bool lastLevel;
 
     public Sprite star;
 
@@ -34,7 +35,7 @@ public class checkForWin : MonoBehaviour
 
     void setButtonNavs()
     {
-        if (!isEndless)
+        if (!isEndless && !lastLevel)
         {
             Navigation nextNav = new Navigation();
             nextNav.mode = Navigation.Mode.Explicit;
