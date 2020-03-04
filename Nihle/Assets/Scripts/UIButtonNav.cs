@@ -163,18 +163,19 @@ public class UIButtonNav : MonoBehaviour
 
     public void backButton()
     {
+        if (howToPlayScreen.activeInHierarchy) howToPlayScreen.SetActive(false);
+        playScreen.SetActive(false);
         titleScreen.SetActive(true);
         eventSystem.SetSelectedGameObject(playBtn.gameObject);
-        if (howToPlayScreen.activeInHierarchy) howToPlayScreen.SetActive(false);
     }
 
     public void backButton2()
     {
         if (challengeScreen.activeInHierarchy)
         {
+            //challengeScreen.GetComponent<UILevelButtons>().totalCompletion = 0;
+            //challengeScreen.GetComponent<UILevelButtons>().resetStars();
             challengeScreen.SetActive(false);
-            challengeScreen.GetComponent<UILevelButtons>().totalCompletion = 0;
-            challengeScreen.GetComponent<UILevelButtons>().resetStars();
         }
         if (freePlayScreen.activeInHierarchy) freePlayScreen.SetActive(false);
 
