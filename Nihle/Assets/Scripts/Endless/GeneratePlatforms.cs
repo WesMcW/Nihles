@@ -22,7 +22,7 @@ public class GeneratePlatforms : MonoBehaviour
 
     public void startInvoke()
     {
-        InvokeRepeating("startPlatforms", 2.5F, 8.5F);
+        InvokeRepeating("startPlatforms", 5F, 6.5F);
     }
 
     public void startPlatforms()
@@ -31,7 +31,7 @@ public class GeneratePlatforms : MonoBehaviour
         Instantiate(sadPrefabs[sadPick], placement, Quaternion.identity);
 
         // place happy pick, check if its special or not
-        if (sadPick != 3)
+        if (sadPick != 3 && sadPick != 4)
         {
             happyPick = chooseRandom(happyPick, true);
             Instantiate(happyPrefabs[happyPick], new Vector3Int(1, placement.y, 0), Quaternion.identity);

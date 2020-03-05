@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     private Animator anim;
 
+    bool usingController;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -34,8 +36,16 @@ public class PlayerMovement : MonoBehaviour
         //gets horizontal movement from controller
         if (Input.GetJoystickNames().Length > 0)
         {
-            if (Input.GetJoystickNames()[0].Length == 33 || Input.GetJoystickNames()[0].Length == 19 || Input.GetJoystickNames()[0].Length == 25) horizontalMovement = Input.GetAxisRaw("MoveHorizontalOne");
-            else horizontalMovement = Input.GetAxisRaw("PlayerOneKeyMove");
+            if (Input.GetJoystickNames()[0].Length == 33 || Input.GetJoystickNames()[0].Length == 19 || Input.GetJoystickNames()[0].Length == 25)
+            {
+                horizontalMovement = Input.GetAxisRaw("MoveHorizontalOne");
+                usingController = true;
+            }
+            else
+            {
+                horizontalMovement = Input.GetAxisRaw("PlayerOneKeyMove");
+                usingController = false;
+            }
         }
         else horizontalMovement = Input.GetAxisRaw("PlayerOneKeyMove");
         movement = new Vector2(horizontalMovement, verticalMovement);

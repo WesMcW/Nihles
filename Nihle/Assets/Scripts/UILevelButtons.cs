@@ -14,6 +14,8 @@ public class UILevelButtons : MonoBehaviour
     public int totalCompletion;
     public Text amount;
 
+    public bool updatedStars = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -108,39 +110,44 @@ public class UILevelButtons : MonoBehaviour
 
     public void updateCollectables()
     {
-        LevelButtons[0].interactable = true;
-
-        if(PlayerPrefs.GetInt("Level1Score") > 0)
+        if (!updatedStars)
         {
-            for (int j = 0; j < PlayerPrefs.GetInt("Level1Score"); j++)
+            LevelButtons[0].interactable = true;
+
+            if (PlayerPrefs.GetInt("Level1Score") > 0)
             {
-                LevelButtons[0].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
-                Debug.Log("Add Star for Level " + j);
-                totalCompletion++;
-            }
-        }
-
-        // shows collectables found in each level
-        for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel") - 1; i++)
-        {
-            LevelButtons[i].interactable = true;
-
-            string playPref = "Level" + (i + 1) + "Score";
-            Debug.Log("Finding Score of Level: " + playPref);
-
-            if(PlayerPrefs.GetInt(playPref) > 0)
-            {
-                for(int j = 0; j < PlayerPrefs.GetInt(playPref); j++)
+                for (int j = 0; j < PlayerPrefs.GetInt("Level1Score"); j++)
                 {
-                    LevelButtons[i].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
+                    LevelButtons[0].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
                     Debug.Log("Add Star for Level " + j);
                     totalCompletion++;
                 }
             }
+
+            // shows collectables found in each level
+            for (int i = 1; i < PlayerPrefs.GetInt("MaxLevel"); i++)
+            {
+                LevelButtons[i].interactable = true;
+
+                string playPref = "Level" + (i + 1) + "Score";
+                Debug.Log("Finding Score of Level: " + playPref);
+
+                if (PlayerPrefs.GetInt(playPref) > 0)
+                {
+                    for (int j = 0; j < PlayerPrefs.GetInt(playPref); j++)
+                    {
+                        LevelButtons[i].transform.GetChild(1).GetChild(j).gameObject.SetActive(true);
+                        Debug.Log("Add Star for Level " + j);
+                        totalCompletion++;
+                    }
+                }
+            }
+            //set bar
+            int total = Mathf.RoundToInt((totalCompletion / 45f) * 100);
+            Debug.Log(totalCompletion + " " + total);
+            amount.text = total + "%";
+
+            updatedStars = true;
         }
-        //set bar
-        int total = Mathf.RoundToInt((totalCompletion / 45f) * 100);
-        Debug.Log(totalCompletion + " " + total);
-        amount.text = total + "%";
     }
 }
