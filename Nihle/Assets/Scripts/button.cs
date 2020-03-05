@@ -44,7 +44,7 @@ public class button : MonoBehaviour
             animator.SetBool("isPressed", false);
             collision.gameObject.transform.parent = null;
             playSoundOnce = false;
-            SoundManager.instance.platDissapear();
+            SoundManager.instance.platAppear();
             if (isDisappearing && isPlatformButton)
             {
                 print("Disappear");
