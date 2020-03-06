@@ -33,6 +33,7 @@ public class UIButtonNav : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("MaxLevel") <= 0) PlayerPrefs.SetInt("MaxLevel", 1);
 
+        Time.timeScale = 1;
         setNavigations();
 
         titleScreen.SetActive(true);
