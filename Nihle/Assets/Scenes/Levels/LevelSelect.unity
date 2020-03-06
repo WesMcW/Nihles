@@ -1234,6 +1234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100760349}
   - component: {fileID: 100760350}
+  - component: {fileID: 100760351}
   m_Layer: 11
   m_Name: HappyPlayer_0
   m_TagString: Untagged
@@ -1305,6 +1306,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &100760351
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100760348}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 389a8f07e561bc94fb9894a0e1f4b27d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &132091463
 GameObject:
   m_ObjectHideFlags: 0
@@ -18248,6 +18268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 878592894}
   - component: {fileID: 878592893}
+  - component: {fileID: 878592892}
   m_Layer: 10
   m_Name: SadPlayer_0
   m_TagString: Untagged
@@ -18255,6 +18276,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &878592892
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878592891}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b878f2e9fa5f6ab43ab1a9ab9603e21b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &878592893
 SpriteRenderer:
   m_ObjectHideFlags: 0
