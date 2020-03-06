@@ -9707,6 +9707,7 @@ GameObject:
   - component: {fileID: 1607963215}
   - component: {fileID: 1607963214}
   - component: {fileID: 1607963213}
+  - component: {fileID: 1607963216}
   m_Layer: 5
   m_Name: THEFILTER
   m_TagString: Untagged
@@ -9789,6 +9790,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607963211}
   m_CullTransparentMesh: 0
+--- !u!114 &1607963216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607963211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7c48e662b519a4fa31501ecd03efd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1623364431
 PrefabInstance:
   m_ObjectHideFlags: 0
