@@ -5516,6 +5516,15 @@ Tilemap:
   m_GameObject: {fileID: 5483719114583164511}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -10, y: -5, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: -9, y: -5, z: 0}
     second:
       m_TileIndex: 0
@@ -5691,7 +5700,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: ca940b15961f6d74ba32716e156ea58e, type: 2}
-  - m_RefCount: 9
+  - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: 86fd6f7c11bea02479d27ab703377dda, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 57085397811165846b07f90e76c1dcae, type: 2}
@@ -5701,7 +5710,7 @@ Tilemap:
   - m_RefCount: 8
     m_Data: {fileID: -5945798629697752630, guid: d5efccd241e45416b8bbed5688f16056,
       type: 3}
-  - m_RefCount: 9
+  - m_RefCount: 10
     m_Data: {fileID: 52515460226519703, guid: d5efccd241e45416b8bbed5688f16056, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 581179668972793739, guid: d5efccd241e45416b8bbed5688f16056, type: 3}
@@ -5709,7 +5718,7 @@ Tilemap:
     m_Data: {fileID: -5204458858969611831, guid: d5efccd241e45416b8bbed5688f16056,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 19
+  - m_RefCount: 20
     m_Data:
       e00: 1
       e01: 0
@@ -5730,7 +5739,7 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 0
     m_Data: {r: -1.1713308e-38, g: -1.1713308e-38, b: -1.1713308e-38, a: -1.1713308e-38}
-  - m_RefCount: 19
+  - m_RefCount: 20
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5790,7 +5799,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &5483719114583164510
 CompositeCollider2D:
@@ -5812,14 +5821,38 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 5483719114583164508}
     m_ColliderPaths:
-    - - X: -90000000
-        Y: 50000000
-      - X: -100000000
-        Y: 50000000
-      - X: -100000000
+    - - X: -89999900
+        Y: -50000041
+      - X: -89999900
+        Y: -50000000
+      - X: -10000000
+        Y: -50000000
+      - X: -10000000
         Y: -40000000
+      - X: -89999900
+        Y: -40000000
+      - X: -89999900
+        Y: -39999959
+      - X: -89999959
+        Y: -39999900
       - X: -90000000
-        Y: -40000000
+        Y: -39999900
+      - X: -90000000
+        Y: 50000000
+      - X: -100000000
+        Y: 50000000
+      - X: -100000000
+        Y: -39999900
+      - X: -100000041
+        Y: -39999900
+      - X: -100000100
+        Y: -39999959
+      - X: -100000100
+        Y: -50000041
+      - X: -100000041
+        Y: -50000100
+      - X: -89999959
+        Y: -50000100
     - - X: -10000000
         Y: -14375000
       - X: -10625000
@@ -5836,20 +5869,14 @@ CompositeCollider2D:
         Y: -20000000
       - X: -10000000
         Y: -20000000
-    - - X: -10000000
-        Y: -40000000
-      - X: -90000000
-        Y: -40000000
-      - X: -90000000
-        Y: -50000000
-      - X: -10000000
-        Y: -50000000
   m_CompositePaths:
     m_Paths:
-    - - {x: -9.00003, y: -4}
+    - - {x: -10.00001, y: -4.9999747}
+      - {x: -1, y: -4.999971}
+      - {x: -1.0000293, y: -4}
+      - {x: -9, y: -3.999961}
       - {x: -9.00003, y: 5}
       - {x: -10, y: 4.999971}
-      - {x: -9.99997, y: -4}
     - - {x: -1.0000293, y: -2}
       - {x: -1.0000013, y: -1.4374962}
       - {x: -1.0625025, y: -1.2499967}
@@ -5858,10 +5885,6 @@ CompositeCollider2D:
       - {x: -2.8750012, y: -1.1250019}
       - {x: -3, y: -1.3125079}
       - {x: -2.999971, y: -2}
-    - - {x: -1.0000293, y: -5}
-      - {x: -1.0000293, y: -4}
-      - {x: -9, y: -4.000029}
-      - {x: -8.99997, y: -5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!1 &5483719114583164511
@@ -5920,7 +5943,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!66 &5483719115816133319
 CompositeCollider2D:
