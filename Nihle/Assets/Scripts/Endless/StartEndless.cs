@@ -8,6 +8,7 @@ public class StartEndless : MonoBehaviour
     public float startTime;
     public bool running;
     float timeMove = 0;
+    float faster = 2F;
 
     public Text scoreTxt;
 
@@ -26,7 +27,7 @@ public class StartEndless : MonoBehaviour
     {
         if (running)
         {
-            timeMove += (Time.deltaTime / 2);
+            timeMove += (Time.deltaTime / faster);
             movingCamera.transform.position = new Vector3(0, timeMove, -10);
 
             totalTime += Time.deltaTime;
@@ -34,10 +35,17 @@ public class StartEndless : MonoBehaviour
         }
     }
 
+    void goFaster()
+    {
+        if (faster > 1F) faster -= 0.1F;
+    }
+
     void startGame()
     {
         running = true;
         GetComponent<GenerateWalls>().startInvoke();
         GetComponent<GeneratePlatforms>().startInvoke();
+
+        InvokeRepeating("goFaster", 30F, 10F);
     }
 }
