@@ -5,8 +5,6 @@ using mover;
 
 public class button : MonoBehaviour
 {
-
-    public LayerMask pushBlocky;
     public GameObject platform;
     public Animator animator;
     public Sprite active, inactive;
@@ -15,13 +13,18 @@ public class button : MonoBehaviour
     public bool isDisappearing = false;
     bool playSoundOnce = false;
 
+    List<GameObject> colliders;
+
     public Component[] myChildren;
     private void Awake() {
         animator = GetComponent<Animator>();
+        colliders = new List<GameObject>();
     }
     private void OnTriggerStay2D(Collider2D collision) {
         if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0)
         {
+            if(!colliders.Contains(collision.gameObject)) colliders.Add(collision.gameObject);
+
             collision.gameObject.transform.parent = gameObject.transform;
             animator.SetBool("isPressed", true);
             if(isPlatformButton == true && !isDisappearing) {
@@ -31,7 +34,8 @@ public class button : MonoBehaviour
             {
                // collision.gameObject.transform.parent = null;
                 Unparent();
-                platform.SetActive(false);
+                //platform.SetActive(false);
+                disablePlatform();
             }
             if(isWorldChangeButton == true) {
 
@@ -41,20 +45,24 @@ public class button : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision) {
         if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0 ){
-            animator.SetBool("isPressed", false);
-            collision.gameObject.transform.parent = null;
-            playSoundOnce = false;
-            SoundManager.instance.platAppear();
-            if (isDisappearing && isPlatformButton)
+            
+            colliders.Remove(collision.gameObject);
+            if (colliders.Count == 0)
             {
-                print("Disappear");
-                platform.SetActive(true);
+                animator.SetBool("isPressed", false);
+                collision.gameObject.transform.parent = null;
+                playSoundOnce = false;
+                SoundManager.instance.platAppear();
+                if (isDisappearing && isPlatformButton)
+                {
+                    print("Disappear");
+                    enablePlatform();
+                }
+                if (isPlatformButton == true && !isDisappearing)
+                {
+                    disablePlatform();
+                }
             }
-            if (isPlatformButton == true && !isDisappearing)
-            {
-                disablePlatform();
-            }
-
         }
     }
 
