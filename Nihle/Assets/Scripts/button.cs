@@ -19,7 +19,7 @@ public class button : MonoBehaviour
     private void Awake() {
         animator = GetComponent<Animator>();
     }
-    private void OnCollisionStay2D(Collision2D collision) {
+    private void OnTriggerStay2D(Collider2D collision) {
         if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0)
         {
             collision.gameObject.transform.parent = gameObject.transform;
@@ -39,7 +39,7 @@ public class button : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision) {
+    private void OnTriggerExit2D(Collider2D collision) {
         if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0 ){
             animator.SetBool("isPressed", false);
             collision.gameObject.transform.parent = null;

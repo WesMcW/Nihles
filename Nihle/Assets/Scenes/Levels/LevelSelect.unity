@@ -19408,7 +19408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2871341013479357434, guid: d0f97d1dc38eb401c83922b07af8da0a,
+  m_Sprite: {fileID: -5052031293702031189, guid: d0f97d1dc38eb401c83922b07af8da0a,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -24640,7 +24640,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Controller Inputs
+  m_Text: Controller (xbox)
 --- !u!222 &1599485649
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27957,7 +27957,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Keyboard Controls
+  m_Text: Keyboard
 --- !u!222 &2015216875
 CanvasRenderer:
   m_ObjectHideFlags: 0
