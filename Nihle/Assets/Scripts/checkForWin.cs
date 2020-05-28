@@ -8,6 +8,7 @@ public class checkForWin : MonoBehaviour
 {
     public bool isEndless;
     public bool lastLevel;
+    public bool isBonus;
 
     public Sprite star;
 
@@ -35,7 +36,7 @@ public class checkForWin : MonoBehaviour
 
     void setButtonNavs()
     {
-        if (!isEndless && !lastLevel)
+        if (!isEndless && !lastLevel && !isBonus)
         {
             Navigation nextNav = new Navigation();
             nextNav.mode = Navigation.Mode.Explicit;
@@ -68,6 +69,8 @@ public class checkForWin : MonoBehaviour
             menuNav.selectOnLeft = winScreenBtns[0];
             menuNav.selectOnRight = winScreenBtns[0];
             winScreenBtns[1].navigation = menuNav;
+
+            if (winScreenBtns[0] != null) winScreenBtns[0].gameObject.SetActive(false);
         }
 
         GameObject.Find("EventSystem").GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(winScreenBtns[0].gameObject);
@@ -115,14 +118,24 @@ public class checkForWin : MonoBehaviour
                     }
                 }
 
-                int currLevel = SceneManager.GetActiveScene().buildIndex;
-                if (PlayerPrefs.GetInt("MaxLevel") < currLevel + 1) PlayerPrefs.SetInt("MaxLevel", currLevel + 1);
+                if (!isBonus) 
+                { 
+                    int currLevel = SceneManager.GetActiveScene().buildIndex;
+                    if (PlayerPrefs.GetInt("MaxLevel") < currLevel + 1) PlayerPrefs.SetInt("MaxLevel", currLevel + 1);
 
-                if (PlayerPrefs.GetInt("MaxLevel") >= 16) checkForHundo();
+                    if (PlayerPrefs.GetInt("MaxLevel") >= 16) checkForHundo();
 
-                string playPref = "Level" + currLevel + "Score";
-                Debug.Log(playPref + ", " + finalScore);
-                if (finalScore > PlayerPrefs.GetInt(playPref)) PlayerPrefs.SetInt(playPref, finalScore);
+                    string playPref = "Level" + currLevel + "Score";
+                    Debug.Log(playPref + ", " + finalScore);
+                    if (finalScore > PlayerPrefs.GetInt(playPref)) PlayerPrefs.SetInt(playPref, finalScore);
+                }
+                else
+                {
+                    int bonusLevel = SceneManager.GetActiveScene().buildIndex - 17;
+                    string playPref = "Bonus" + bonusLevel + "Score";
+                    Debug.Log(playPref + ", " + finalScore);
+                    if (finalScore > PlayerPrefs.GetInt(playPref)) PlayerPrefs.SetInt(playPref, finalScore);
+                }
             }
         }
 
