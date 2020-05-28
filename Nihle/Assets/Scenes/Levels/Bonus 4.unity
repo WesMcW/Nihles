@@ -930,12 +930,12 @@ PrefabInstance:
     - target: {fileID: 4037646677574226252, guid: 52d6fae076c38ed4a931513809c32f0d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.48
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 4037646677574226252, guid: 52d6fae076c38ed4a931513809c32f0d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.71
+      value: 3.41
       objectReference: {fileID: 0}
     - target: {fileID: 4037646677574226252, guid: 52d6fae076c38ed4a931513809c32f0d,
         type: 3}
@@ -1590,12 +1590,12 @@ PrefabInstance:
     - target: {fileID: 4037646677574226252, guid: 52d6fae076c38ed4a931513809c32f0d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.48
+      value: 1.6100001
       objectReference: {fileID: 0}
     - target: {fileID: 4037646677574226252, guid: 52d6fae076c38ed4a931513809c32f0d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.71
+      value: 3.4099998
       objectReference: {fileID: 0}
     - target: {fileID: 4037646677574226252, guid: 52d6fae076c38ed4a931513809c32f0d,
         type: 3}
@@ -1659,12 +1659,12 @@ PrefabInstance:
     - target: {fileID: 7492403357640244777, guid: f153890d060912b4b870fe2e09e27e8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.27
+      value: 3.33
       objectReference: {fileID: 0}
     - target: {fileID: 7492403357640244777, guid: f153890d060912b4b870fe2e09e27e8b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.03
+      value: -2.07
       objectReference: {fileID: 0}
     - target: {fileID: 7492403357640244777, guid: f153890d060912b4b870fe2e09e27e8b,
         type: 3}
@@ -2087,12 +2087,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -985405868697811263, guid: fd7aa8b8f1e764f25a1f209fdc5e5068,
+      objectReference: {fileID: -3491679191283731638, guid: fd7aa8b8f1e764f25a1f209fdc5e5068,
         type: 3}
     - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
         type: 3}
       propertyPath: m_Name
       value: HappyPlatformsRegular (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6010406865215258474, guid: 566087513913d554bbc1365343314029,
         type: 3}
