@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace mover {
     public class movingPlatforms : MonoBehaviour {
+        public bool stopped = false;
+        
         private GameObject platform;
         public float speed;
         public float timer = 0;
@@ -17,16 +19,19 @@ namespace mover {
         }
 
         private void Update() {
-            
-            timer += Time.deltaTime / speed;
-            if(timer >= 1) {
-                timer = 0;
-                GameObject tmp = pointOne;
-                pointOne = pointTwo;
-                pointTwo = tmp;
+
+            if (!stopped)
+            {
+                timer += Time.deltaTime / speed;
+                if (timer >= 1)
+                {
+                    timer = 0;
+                    GameObject tmp = pointOne;
+                    pointOne = pointTwo;
+                    pointTwo = tmp;
+                }
+                gameObject.transform.position = Vector2.Lerp(pointOne.transform.position, pointTwo.transform.position, timer);
             }
-           gameObject.transform.position = Vector2.Lerp(pointOne.transform.position, pointTwo.transform.position, timer);
-           
             
         }
 
