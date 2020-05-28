@@ -63,6 +63,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Bonus 2.unity
     guid: e68eaa253570b4a3ebc22774177a70ba
   - enabled: 1
+    path: Assets/Scenes/Levels/Bonus 3.unity
+    guid: 71266da8b36974e42b73d564ef9f6af3
+  - enabled: 1
     path: Assets/Scenes/Levels/Bonus 4.unity
     guid: 979ea17132fd74303ac76ce552f08c84
   m_configObjects: {}
