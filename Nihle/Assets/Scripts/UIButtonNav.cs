@@ -16,15 +16,18 @@ public class UIButtonNav : MonoBehaviour
     public Button freePlayBtn;
     public Button endlessBtn;
     public Button backBtn;
+    public Button bonusBtn;
 
     [Header("Panels and More")]
     public GameObject titleScreen;
     public GameObject playScreen;
     public GameObject challengeScreen;
     public GameObject freePlayScreen;
+    public GameObject bonusScreen;
     public GameObject howToPlayScreen;
     public GameObject firstSelectFree;
     public GameObject firstSelectChal;
+    public GameObject firstSelectBon;
 
     UnityEngine.EventSystems.EventSystem eventSystem;
 
@@ -71,24 +74,39 @@ public class UIButtonNav : MonoBehaviour
         exitNav.selectOnUp = howToBtn;
         exitBtn.navigation = exitNav;
 
+        bool bonusUnlocked = false;
+        if (PlayerPrefs.GetInt("MaxLevel") > 1)
+        {
+            bonusBtn.gameObject.SetActive(true);
+            bonusUnlocked = true;
+
+            Navigation bonusNav = new Navigation();
+            bonusNav.mode = Navigation.Mode.Explicit;
+            bonusNav.selectOnDown = bonusNav.selectOnLeft = challengeBtn;
+            bonusBtn.navigation = bonusNav;
+        }
+
         if (PlayerPrefs.GetInt("Progress") != 100)
         {
             Navigation chalNav = new Navigation();
             chalNav.mode = Navigation.Mode.Explicit;
             chalNav.selectOnDown = freePlayBtn;
             chalNav.selectOnUp = backBtn;
+            if (bonusUnlocked) chalNav.selectOnRight = bonusBtn;
             challengeBtn.navigation = chalNav;
 
             Navigation freeNav = new Navigation();
             freeNav.mode = Navigation.Mode.Explicit;
             freeNav.selectOnDown = backBtn;
             freeNav.selectOnUp = challengeBtn;
+            if (bonusUnlocked) freeNav.selectOnRight = bonusBtn;
             freePlayBtn.navigation = freeNav;
 
             Navigation backNav = new Navigation();
             backNav.mode = Navigation.Mode.Explicit;
             backNav.selectOnDown = challengeBtn;
             backNav.selectOnUp = freePlayBtn;
+            if (bonusUnlocked) backNav.selectOnRight = bonusBtn;
             backBtn.navigation = backNav;
         }
         else
@@ -99,24 +117,28 @@ public class UIButtonNav : MonoBehaviour
             chalNav.mode = Navigation.Mode.Explicit;
             chalNav.selectOnDown = freePlayBtn;
             chalNav.selectOnUp = backBtn;
+            if (bonusUnlocked) chalNav.selectOnRight = bonusBtn;
             challengeBtn.navigation = chalNav;
 
             Navigation freeNav = new Navigation();
             freeNav.mode = Navigation.Mode.Explicit;
             freeNav.selectOnDown = endlessBtn;
             freeNav.selectOnUp = challengeBtn;
+            if (bonusUnlocked) freeNav.selectOnRight = bonusBtn;
             freePlayBtn.navigation = freeNav;
 
             Navigation endlessNav = new Navigation();
             endlessNav.mode = Navigation.Mode.Explicit;
             endlessNav.selectOnDown = backBtn;
             endlessNav.selectOnUp = freePlayBtn;
+            if (bonusUnlocked) endlessNav.selectOnRight = bonusBtn;
             endlessBtn.navigation = endlessNav;
 
             Navigation backNav = new Navigation();
             backNav.mode = Navigation.Mode.Explicit;
             backNav.selectOnDown = challengeBtn;
             backNav.selectOnUp = endlessBtn;
+            if (bonusUnlocked) backNav.selectOnRight = bonusBtn;
             backBtn.navigation = backNav;
         }
     }
@@ -162,9 +184,18 @@ public class UIButtonNav : MonoBehaviour
         eventSystem.SetSelectedGameObject(firstSelectFree);
     }
 
+    public void bonusLevelButton()
+    {
+        playScreen.SetActive(false);
+        bonusScreen.SetActive(true);
+
+        eventSystem.SetSelectedGameObject(firstSelectBon);
+    }
+
     public void backButton()
     {
         if (howToPlayScreen.activeInHierarchy) howToPlayScreen.SetActive(false);
+        bonusScreen.SetActive(false);
         playScreen.SetActive(false);
         titleScreen.SetActive(true);
         eventSystem.SetSelectedGameObject(playBtn.gameObject);
