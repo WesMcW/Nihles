@@ -5098,6 +5098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   timer: 0
+  isPush: 0
   pointOne: {fileID: 1037092068}
   pointTwo: {fileID: 1131892015}
 --- !u!61 &2036591831
@@ -5383,6 +5384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   timer: 0
+  isPush: 0
   pointOne: {fileID: 2057293210960157340}
   pointTwo: {fileID: 2057293210613204457}
 --- !u!61 &2057293209477694478
@@ -7292,7 +7294,7 @@ Tilemap:
   - m_RefCount: 8
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.83137256, g: 0.83137256, b: 0.83137256, a: 1}
   m_Origin: {x: -8, y: -5, z: 0}
   m_Size: {x: 16, y: 7, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -7515,6 +7517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   timer: 0
+  isPush: 0
   pointOne: {fileID: 8321957859802246018}
   pointTwo: {fileID: 8321957858863806071}
 --- !u!4 &8321957858863806070

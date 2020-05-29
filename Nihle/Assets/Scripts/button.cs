@@ -11,16 +11,16 @@ public class button : MonoBehaviour
     public bool isPlatformButton;
     public bool isWorldChangeButton;
     public bool isDisappearing = false;
-    bool playSoundOnce = false;
+    protected bool playSoundOnce = false;
 
-    List<GameObject> colliders;
+    protected List<GameObject> colliders;
 
     public Component[] myChildren;
     private void Awake() {
         animator = GetComponent<Animator>();
         colliders = new List<GameObject>();
     }
-    private void OnTriggerStay2D(Collider2D collision) {
+    virtual protected void OnTriggerStay2D(Collider2D collision) {
         if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0)
         {
             if(!colliders.Contains(collision.gameObject)) colliders.Add(collision.gameObject);
@@ -43,7 +43,7 @@ public class button : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision) {
+    virtual protected void OnTriggerExit2D(Collider2D collision) {
         if(collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2") || collision.gameObject.GetComponent<Rigidbody2D>().mass > 0 ){
             
             colliders.Remove(collision.gameObject);
@@ -89,7 +89,7 @@ public class button : MonoBehaviour
 
     }
 
-    void Unparent() {
+    protected void Unparent() {
         myChildren = platform.GetComponentsInChildren<Component>();
         for(int i = 0; i < myChildren.Length; i++) {
             if(myChildren[i].CompareTag("Player1") || myChildren[i].CompareTag("Player2")) {
