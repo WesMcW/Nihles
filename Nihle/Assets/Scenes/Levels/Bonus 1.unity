@@ -796,6 +796,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HappyPlatformsRegular
       objectReference: {fileID: 0}
+    - target: {fileID: 1991017220908608136, guid: 566087513913d554bbc1365343314029,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6010406865215258474, guid: 566087513913d554bbc1365343314029,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1421,7 +1426,7 @@ GameObject:
   - component: {fileID: 818559997}
   m_Layer: 0
   m_Name: Moving Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1540,7 +1545,7 @@ GameObject:
   - component: {fileID: 868362198}
   m_Layer: 0
   m_Name: Platforms
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1727,7 +1732,7 @@ GameObject:
   - component: {fileID: 1273474539}
   m_Layer: 0
   m_Name: Platforms
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2828,6 +2833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 2
   timer: 0
   isPush: 0

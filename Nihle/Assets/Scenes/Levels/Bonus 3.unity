@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 2
   timer: 0
   isPush: 0
@@ -203,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 2
   timer: 0
   isPush: 0
@@ -1566,6 +1568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 2
   timer: 0
   isPush: 0
@@ -1759,6 +1762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306389975178838421, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66f3768461c94aa43a9103c51142e434, type: 3}
@@ -2632,6 +2640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 3
   timer: 0
   isPush: 0
@@ -3261,6 +3270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 2
   timer: 0
   isPush: 0

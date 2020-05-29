@@ -132,6 +132,18 @@ PrefabInstance:
       propertyPath: platform
       value: 
       objectReference: {fileID: 2024850115}
+    - target: {fileID: 1803503425186196285, guid: 4c3dd60066b47d840a6f6d5efe347a03,
+        type: 3}
+      propertyPath: active
+      value: 
+      objectReference: {fileID: 5146260234604684403, guid: 1308c44c947c44714be87a7dbddc2dbb,
+        type: 3}
+    - target: {fileID: 1803503425186196285, guid: 4c3dd60066b47d840a6f6d5efe347a03,
+        type: 3}
+      propertyPath: inactive
+      value: 
+      objectReference: {fileID: 3256322382463109839, guid: 1308c44c947c44714be87a7dbddc2dbb,
+        type: 3}
     - target: {fileID: 6255175652638959925, guid: 4c3dd60066b47d840a6f6d5efe347a03,
         type: 3}
       propertyPath: m_IsTrigger
@@ -286,6 +298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306389975178838421, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 6280459651698678569, guid: 66f3768461c94aa43a9103c51142e434,
         type: 3}
@@ -1218,6 +1235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 6
   timer: 0
   isPush: 0
@@ -1711,6 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 0
   timer: 0
   isPush: 0
@@ -2372,6 +2391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 8
   timer: 0
   isPush: 0
@@ -2685,6 +2705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b85af1e47907d49bd7e3210e49af02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 0
   speed: 12
   timer: 0
   isPush: 0

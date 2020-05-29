@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4306389975178838421, guid: 66f3768461c94aa43a9103c51142e434,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6280459651698678569, guid: 66f3768461c94aa43a9103c51142e434,
         type: 3}
       propertyPath: m_Offset.x
