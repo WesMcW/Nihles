@@ -7,12 +7,12 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMovement = 0f;
     float verticalMovement = 0f;
     public bool isGrounded;
-    
+
     [SerializeField]
     float speed = 6.5f;
     [SerializeField]
     float jumpSpeed = 20f;
-
+    bool dragging { get; set; }
     [SerializeField]
     public float lowJumpMultiplier = 2f;
     public float fallMultiplier = 2.5f;
@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        dragging = false;
     }
 
     
@@ -69,10 +70,10 @@ public class PlayerMovement : MonoBehaviour
 
         //flips character sprite based on movement
         Vector3 playerScale = transform.localScale;
-        if(horizontalMovement < 0)
+        if(horizontalMovement < 0 && !dragging)
         {
             playerScale.x = -1;
-        } else if (horizontalMovement > 0)
+        } else if (horizontalMovement > 0 &&!dragging)
         {
             playerScale.x = 1;
         }
